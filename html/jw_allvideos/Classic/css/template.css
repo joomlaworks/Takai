@@ -1,0 +1,17 @@
+/**
+ * @version		1.0.0
+ * @package		GetK2Demo
+ * @author		Nuevvo - http://nuevvo.com
+ * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
+ * @license		http://nuevvo.com/license
+ */
+
+/* General */
+.avPlayerWrapper div,
+.avPlayerWrapper object,
+.avPlayerWrapper embed { outline:0; }
+
+/* Layout */
+.avPlayerWrapper { display:block; text-align:center; clear:both; }
+.avPlayerWrapper .avPlayerContainer { }
+.avPlayerWrapper .avPlayerContainer .avPlayerBlock { display:block; }
