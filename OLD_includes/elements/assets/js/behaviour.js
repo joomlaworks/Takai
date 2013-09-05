@@ -1,5 +1,5 @@
 /**
- * @version     1.0.1 (July 19th, 2013)
+ * @version     1.0.0 (June 26th, 2013)
  * @package     Akhtarma
  * @author      Nuevvo - http://nuevvo.com
  * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -247,7 +247,7 @@ $nu(document).ready(function() {
 					target.on('click', 'i', function() {
 						var icon = $nu(this).clone().wrap('<div/>').parent().html();
 						parent.find('.nuHighlightsIconPreview').empty().html(icon);
-						parent.find('input[type="hidden"]').val(icon);
+						parent.find('input[type="text"]').val(icon);
 						target.addClass('nuHighlightIconsListHidden');
 					});
 				}

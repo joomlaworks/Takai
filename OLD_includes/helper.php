@@ -1,7 +1,7 @@
 <?php
 /**
  * @version		1.0.0
- * @package		Boilerplate
+ * @package		GetK2Demo
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
  * @license		http://nuevvo.com/license
@@ -14,7 +14,6 @@ defined('_JEXEC') or die('Restricted access');
 $app					= JFactory::getApplication();
 $document 		= JFactory::getDocument();
 $language			= JFactory::getLanguage();
-$user					= JFactory::getUser();
 
 $sitename			= $app->getCfg('sitename');
 $sitetemplate	= $app->getTemplate();
@@ -42,22 +41,6 @@ $tmpl 				= JRequest::getCmd('tmpl');
 // Convert language strings to a JSON friendly format for the error/offline pages
 function nuText($str){
 	return str_replace("'","\\'",JText::_($str));
-}
-
-// Hex to RGB conversion
-function hex2rgb($hex) {
-	$hex = str_replace("#", "", $hex);
-	if(strlen($hex) == 3) {
-		$r = hexdec(substr($hex,0,1).substr($hex,0,1));
-		$g = hexdec(substr($hex,1,1).substr($hex,1,1));
-		$b = hexdec(substr($hex,2,1).substr($hex,2,1));
-	} else {
-		$r = hexdec(substr($hex,0,2));
-		$g = hexdec(substr($hex,2,2));
-		$b = hexdec(substr($hex,4,2));
-	}
-	$rgb = array($r, $g, $b);
-	return implode(",", $rgb);
 }
 
 
@@ -156,30 +139,26 @@ if(version_compare(JVERSION, '3.0', 'ge')!==false && $this->params->get('nutpFor
 	JHtml::_('bootstrap.framework');
 }
 
-
-
 /* -------------------- Set the <body> class -------------------- */
-$nuBodyClass = '';
-if($isFrontpage) 				$nuBodyClass .= ' isFrontpage';
-if($view) 							$nuBodyClass .= ' viewIs'.ucfirst($view);
-if($layout) 						$nuBodyClass .= ' layoutIs'.ucfirst($layout);
-if($page) 							$nuBodyClass .= ' pageIs'.ucfirst($page);
-if($task) 							$nuBodyClass .= ' taskIs'.ucfirst($task);
-if($id) 								$nuBodyClass .= ' idIs'.ucfirst($id);
-if($itemid) 						$nuBodyClass .= ' itemIdIs'.ucfirst($itemid);
-if($tmpl) 							$nuBodyClass .= ' tmplIs'.ucfirst($tmpl);
-if($tmpl=='component') 	$nuBodyClass .= ' contentpane component componentWrapper';
-if($tmpl=='raw')				$nuBodyClass .= ' rawWrapper';
-$nuBodyClass = trim($nuBodyClass);
-
-
+$bodyClass = '';
+if($isFrontpage) 				$bodyClass .= ' isFrontpage';
+if($view) 							$bodyClass .= ' viewIs'.ucfirst($view);
+if($layout) 						$bodyClass .= ' layoutIs'.ucfirst($layout);
+if($page) 							$bodyClass .= ' pageIs'.ucfirst($page);
+if($task) 							$bodyClass .= ' taskIs'.ucfirst($task);
+if($id) 								$bodyClass .= ' idIs'.ucfirst($id);
+if($itemid) 						$bodyClass .= ' itemIdIs'.ucfirst($itemid);
+if($tmpl) 							$bodyClass .= ' tmplIs'.ucfirst($tmpl);
+if($tmpl=='component') 	$bodyClass .= ' contentpane component componentWrapper';
+if($tmpl=='raw')				$bodyClass .= ' rawWrapper';
+$bodyClass = trim($bodyClass);
 
 /* -------------------- Special Template Positions -------------------- */
 $nuHeadTop = ($this->params->get('nutpHeadTop')) ? $this->params->get('nutpHeadTop')."\n" : '';
 if(version_compare(JVERSION, '3.0', 'ge')===false) $nuHeadTop .= $topMetaTags;
 
 $nuHeadBottom = $this->params->get('nutpHeadBottom');
-$nuHeadBottom .= (isset($ogMetaTags)) ? $ogMetaTags : '';
+$nuHeadBottom .= ($ogMetaTags) ? $ogMetaTags : '';
 $nuHeadBottom .= '
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -210,113 +189,80 @@ $nuHeadBottom = ($nuHeadBottom) ? $nuHeadBottom."\n" : '';
 
 $nuBodyId = $option;
 
+$nuBodyClass = $bodyClass;
+
 $nuBodyTop = ($this->params->get('nutpBodyTop')) ? $this->params->get('nutpBodyTop')."\n" : '';
 
 $nuBodyBottom = ($this->params->get('nutpBodyBottom')) ? $this->params->get('nutpBodyBottom')."\n" : '';
 
 
 
+/* -------------------- Sub-templates -------------------- */
+/* component.php */
+if($tmpl=='component'){
+	// do stuff here for the component sub-template
+}
+
+/* raw.php */
+if($tmpl=='raw'){
+	// do stuff here for the raw sub-template
+}
+
 /* -------------------- JS Handling -------------------- */
-if(!in_array($tmpl, array('error','raw'))){
+if(!in_array($tmpl, array('error','offline','raw')) && $app->getCfg('offline')!=1){
 	// Load jQuery
 	$nutpJqueryHandling = $this->params->get('nutpJqueryHandling','1.10.1');
 	if(version_compare(JVERSION, '3.0', 'ge')!==false){
 		JHtml::_('jquery.framework');
 	} else {
 		if($nutpJqueryHandling){
-			if (version_compare(JVERSION, '1.6.0', 'ge')){
-				JHtml::_('behavior.framework');
-			} else {
-				JHTML::_('behavior.mootools');
-			}
 			$document->addScript('//ajax.googleapis.com/ajax/libs/jquery/'.$nutpJqueryHandling.'/jquery.min.js');
 		}
 	}
 	// Template JS
 	$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/behaviour.js');
-
-	// Custom JS
-	if($this->params->get('nutpLoadCustomJS',1)){
-		$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/custom.js');
-	}
 }
-
-
 
 /* -------------------- CSS Handling [CAN EDIT] -------------------- */
 // Google Web Fonts
-$nutpGoogleWebFonts = $this->params->get('nutpGoogleWebFonts');
 
-if(is_string($nutpGoogleWebFonts)){
-	$nutpGoogleWebFonts = new stdClass;
+// Load additional Google Web Fonts per language
+switch($language->getTag()){
+	case 'el-GR';
+		$document->addStyleSheet('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,700,800&subset=latin,greek-ext,greek');
+		break;
+	case 'vi-VN';
+		$document->addStyleSheet('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,700,800&subset=latin,vietnamese');
+		break;
+	default:
+		$document->addStyleSheet('//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Istok+Web:400,700,400italic,700italic&subset=latin,cyrillic');
 }
 
-// No value saved in the database, so read the XML to get the defaults
-if($nutpGoogleWebFonts && !isset($nutpGoogleWebFonts->fonts)){
-	jimport('joomla.form.form');
-	//JForm::addFormPath(JPATH_SITE.'/templates/'.$app->getTemplate()); // $this->template ?
-	//$form = JForm::getInstance('template.settings', 'templateDetails', array('control' => 'jform'), false, '/extension/config');
-	$form = JForm::getInstance('template.settings', JPATH_SITE.'/templates/'.$app->getTemplate().'/templateDetails.xml', array('control' => 'jform'), false, '/extension/config');
-	$defaultFonts = $form->getFieldAttribute('nutpGoogleWebFonts', 'default', null, 'params');
-	if($defaultFonts){
-		$nutpGoogleWebFonts->fonts = explode(',', $defaultFonts);
-	}
-
-	// If font URLs are not available read them from file
-	if(!isset($nutpGoogleWebFonts->urls)){
-		$nutpGoogleWebFonts->urls = array();
-		$field = $form->getField('nutpGoogleWebFonts','params');
-		$fontsData = json_decode(JFile::read($field->getFile('https://cdn.nuevvo.net/gwf/gwf.php')));
-		foreach($fontsData as $entry){
-			$nutpGoogleWebFonts->urls[$entry->family] = $entry->url;
-		}
-	}
-}
-
-// Build the font URL
-if($nutpGoogleWebFonts && isset($nutpGoogleWebFonts->fonts) && is_array($nutpGoogleWebFonts->fonts)){
-	$googleWebFonts = array();
-	$nutpGoogleWebFonts->urls = (array)$nutpGoogleWebFonts->urls;
-	foreach($nutpGoogleWebFonts->fonts as $font){
-		if($font)
-		{
-			// Get URL vars
-			$fontURL = $nutpGoogleWebFonts->urls[$font];
-			$fontURLParts = parse_url($fontURL);
-			parse_str($fontURLParts['query'], $vars);
-			$googleWebFonts[] = $vars['family'];
-		}
-	}
-	$googleWebFonts = '//fonts.googleapis.com/css?family='.implode('|', $googleWebFonts).'&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext,greek,greek-ext,khmer,vietnamese';
-}
 
 // Template CSS
 switch($tmpl){
 	case 'index';
-		if(isset($googleWebFonts)) $document->addStyleSheet($googleWebFonts);
 		$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/template.css');
 		break;
 	case 'component';
-		if(isset($googleWebFonts)) $document->addStyleSheet($googleWebFonts);
 		$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/component.css');
 		break;
 	case 'raw';
 		// No CSS for the raw.php sub-template
 		break;
 	default:
-		if(isset($googleWebFonts)) $document->addStyleSheet($googleWebFonts);
-		$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/template.css');
+		if($app->getCfg('offline')!=1){
+			$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/template.css');
+		}
 }
 
 // Variations
-include_once(dirname(__FILE__).'/variations.php');
-
-// Custom CSS
-if($this->params->get('nutpLoadCustomCSS',1)){
-	$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/custom.css');
+if($app->getCfg('offline')!=1){
+	include_once(dirname(__FILE__).'/variations.php');
 }
 
-
+// Custom CSS
+$document->addStyleSheet(JURI::base(true).'/templates/'.$this->template.'/css/custom.css');
 
 /* -------------------- Social Links/Icons -------------------- */
 $socialProviders = array(
@@ -350,11 +296,9 @@ foreach($socialProviders as $socialProviderParam => $socialProviderURL){
 /* Usage: loop through the $social array of objects */
 
 
-
 /* -------------------- Meta Tag Processing -------------------- */
 // Sort meta tags (for the purists)
 //ksort($document->_metaTags['standard']);
-
 
 
 /* -------------------- Template Constants -------------------- */
@@ -367,3 +311,9 @@ if(!defined('NU_BODY_BOTTOM')) 	define('NU_BODY_BOTTOM', $nuBodyBottom);
 if(!defined('NU_COPYRIGHTS')) 	define('NU_COPYRIGHTS', $copyrightMessage);
 if(!defined('NU_CREDITS')) 			define('NU_CREDITS', $creditsMessage);
 if(!defined('NU_CDN')) 					define('NU_CDN', 'http://cdn.nuevvo.net');
+
+/* -------------------- Layout Check (template specific) -------------------- */
+$viewCheck 		= ($this->countModules('getK2-Inner-Right'))?' large-8 indexLeft':' large-12 itemlistColumn';
+$layoutCheck 	= ((!$isFrontpage))?'threeColLayout':'twoColLayout';
+$sideBarCheck	=	($this->countModules('getK2-SideBarLower or SideModulesLeft or SideModulesRight or SideBarLower'))?'large-8':'';
+

@@ -1,5 +1,5 @@
 /**
- * @version     1.0.1 (July 19th, 2013)
+ * @version     1.0.0 (June 26th, 2013)
  * @package     Akhtarma
  * @author      Nuevvo - http://nuevvo.com
  * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -51,7 +51,6 @@ table.nuTmplParams tr td input,
 table.nuTmplParams tr td textarea {float:none !important;border:1px solid #bdc3c7;border-radius:4px;font-size:13px;padding:10px;color:#393939;box-shadow:0 1px 1px #e5e5e5;font-family:Arial, Helvetica, sans-serif;height:auto;}
 table.nuTmplParams tr td input {max-height:36px;}
 table.nuTmplParams tr td select {float:none !important;border:1px solid #bdc3c7;border-radius:4px;font-size:13px;color:#393939;margin:0;padding:4px;box-shadow:0 1px 1px #e5e5e5;font-family:Arial, Helvetica, sans-serif;height:34px;line-height:34px;}
-table.nuTmplParams tr td select.multipleList {height:auto;}
 
 /* Headers */
 table.nuTmplParams tr.nuHeaderRow {border:none;}

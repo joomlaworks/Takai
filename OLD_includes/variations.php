@@ -10,23 +10,6 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-/* -------------------- Load additional Google Web Fonts per language [CAN EDIT] -------------------- */
-/*
-switch($language->getTag()){
-	case 'el-GR';
-		$document->addStyleSheet('//fonts.googleapis.com/css?family=X|Y|Z');
-		break;
-	case 'vi-VN';
-		$document->addStyleSheet('//fonts.googleapis.com/css?family=X|Y|Z');
-		break;
-	case 'km-KH';
-		$document->addStyleSheet('//fonts.googleapis.com/css?family=X|Y|Z');
-		break;
-}
-*/
-
-
-
 /* -------------------- Content Hightlights [CAN EDIT] -------------------- */
 if($this->params->get('contentHighlights')){
 	$highlights = $this->params->get('contentHighlights');
@@ -119,28 +102,10 @@ if($this->params->get('categoryColors')){
 
 
 
-/* -------------------- Sub-templates [CAN EDIT] -------------------- */
-/* component.php */
-if($tmpl=='component'){
-	// do stuff here for the component sub-template
-}
-
-/* raw.php */
-if($tmpl=='raw'){
-	// do stuff here for the raw sub-template
-}
-
-
-
 /* -------------------- Custom Template Logic [CAN EDIT] -------------------- */
 // Extend the <body> class
-if($nuBodyClass) $nuBodyClass .= '';
-
-
+if($bodyClass) $bodyClass .= '';
 
 // Add other template specific rules and logic here
-/* -------------------- Layout Check (template specific) -------------------- */
-$viewCheck 		= ($this->countModules('getK2-Inner-Right'))?' large-8 indexLeft':' large-12 itemlistColumn';
-$layoutCheck 	= ((!$isFrontpage))?'threeColLayout':'twoColLayout';
-$sideBarCheck	=	($this->countModules('getK2-SideBarLower or SideModulesLeft or SideModulesRight or SideBarLower'))?'large-8':'';
+
 
