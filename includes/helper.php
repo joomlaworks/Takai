@@ -240,8 +240,11 @@ if(!in_array($tmpl, array('error','raw'))){
 			$document->addScript('//ajax.googleapis.com/ajax/libs/jquery/'.$nutpJqueryHandling.'/jquery.min.js');
 		}
 	}
-	// Template JS
-	$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/behaviour.js');
+	// Template JS. Do not load in in front-end editing.
+	if(!($option == 'com_k2' && $view == 'item' && ($task == 'add' || $task == 'edit')))
+	{
+		$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/behaviour.js');
+	}
 
 	// Custom JS
 	if($this->params->get('nutpLoadCustomJS',1)){
