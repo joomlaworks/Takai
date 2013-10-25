@@ -1,7 +1,7 @@
 <?php
 /**
  * @version		1.0.0
- * @package		GetK2Demo
+* @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
  * @license		http://nuevvo.com/license
@@ -137,18 +137,10 @@ if($isFrontpage){
 }
 
 // Apple Touch Icons
-if ($this->params->get('nutpIconIOS57x57')) {
-	$document->addHeadLink($this->params->get('nutpIconIOS57x57', $templatePath.'/includes/images/ios/icon.png'), 'apple-touch-icon', 'rel');
-}
-if ($this->params->get('nutpIconIOS72x72')) {
-	$document->addHeadLink($this->params->get('nutpIconIOS72x72', $templatePath.'/includes/images/ios/icon-72.png'), 'apple-touch-icon', 'rel', array('sizes'=>'72x72'));
-}
-if ($this->params->get('nutpIconIOS114x114')) {
-	$document->addHeadLink($this->params->get('nutpIconIOS114x114', $templatePath.'/includes/images/ios/icon@2x.png'), 'apple-touch-icon', 'rel', array('sizes'=>'114x114'));
-}
-if ($this->params->get('nutpIconIOS144x144')) {
-	$document->addHeadLink($this->params->get('nutpIconIOS144x144', $templatePath.'/includes/images/ios/icon-72@2x.png'), 'apple-touch-icon', 'rel', array('sizes'=>'144x144'));
-}
+$document->addHeadLink($this->params->get('nutpIconIOS57x57', $templatePath.'/includes/images/ios/icon.png'), 'apple-touch-icon', 'rel');
+$document->addHeadLink($this->params->get('nutpIconIOS72x72', $templatePath.'/includes/images/ios/icon-72.png'), 'apple-touch-icon', 'rel', array('sizes'=>'72x72'));
+$document->addHeadLink($this->params->get('nutpIconIOS114x114', $templatePath.'/includes/images/ios/icon@2x.png'), 'apple-touch-icon', 'rel', array('sizes'=>'114x114'));
+$document->addHeadLink($this->params->get('nutpIconIOS144x144', $templatePath.'/includes/images/ios/icon-72@2x.png'), 'apple-touch-icon', 'rel', array('sizes'=>'144x144'));
 
 // Remove the canonical meta tag in Joomla! 3.x
 if(version_compare(JVERSION, '3.0', 'ge')!==false && $this->params->get('nutpRemoveCanonicalMeta', 0)){
@@ -176,7 +168,7 @@ if($task) 							$nuBodyClass .= ' taskIs'.ucfirst($task);
 if($id) 								$nuBodyClass .= ' idIs'.ucfirst($id);
 if($itemid) 						$nuBodyClass .= ' itemIdIs'.ucfirst($itemid);
 if($tmpl) 							$nuBodyClass .= ' tmplIs'.ucfirst($tmpl);
-if($tmpl=='component') 	$nuBodyClass .= ' contentpane component componentWrapper';
+if($tmpl=='component') 	$nuBodyClass .= ' contentpane component componentWrapper componentContainer';
 if($tmpl=='raw')				$nuBodyClass .= ' rawWrapper';
 $nuBodyClass = trim($nuBodyClass);
 
@@ -246,11 +238,13 @@ if(!in_array($tmpl, array('error','raw'))){
 		$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/behaviour.js');
 	}
 
+
 	// Custom JS
 	if($this->params->get('nutpLoadCustomJS',1)){
 		$document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/custom.js');
 	}
 }
+
 
 
 /* -------------------- CSS Handling [CAN EDIT] -------------------- */

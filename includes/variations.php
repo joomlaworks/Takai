@@ -1,7 +1,7 @@
 <?php
 /**
  * @version		1.0.0
- * @package		Boilerplate
+ * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
  * @license		http://nuevvo.com/license
@@ -129,7 +129,6 @@ if($tmpl=='component'){
 if($tmpl=='raw'){
 	// do stuff here for the raw sub-template
 }
-
 
 
 /* -------------------- Custom Template Logic [CAN EDIT] -------------------- */

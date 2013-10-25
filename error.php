@@ -1,7 +1,7 @@
 <?php
 /**
  * @version		1.0.0
- * @package		GetK2Demo
+* @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
  * @license		http://nuevvo.com/license
@@ -14,13 +14,14 @@ require_once(dirname(__FILE__).'/includes/helper.php');
 
 ?>
 <!DOCTYPE html>
-<!--[if lte IE 6]><html class="isIE6" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"><![endif]-->
-<!--[if IE 7]><html class="isIE7" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"><![endif]-->
-<!--[if IE 8]><html class="isIE8" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"><![endif]-->
-<!--[if IE 9]><html class="isIE9" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="isIE6" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 7]><html class="isIE7" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 8]><html class="isIE8" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html class="isIE9" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
 	<head>
-		<?php echo NU_HEAD_TOP; ?>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 		<meta charset="utf-8" />
 		<title><?php echo $this->error->getCode(); ?> | <?php echo $this->title; ?></title>
 		<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0" />
@@ -43,11 +44,11 @@ require_once(dirname(__FILE__).'/includes/helper.php');
 			}
 		</script>
 		<script type="text/javascript" src="<?php echo NU_CDN; ?>/templates/error.js"></script>
-		<?php echo NU_HEAD_BOTTOM; ?>
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<![endif]-->
 	</head>
-	<body id="<?php echo NU_BODY_ID; ?>" class="<?php echo NU_BODY_CLASS; ?>">
-		<?php echo NU_BODY_TOP; ?>
+	<body class="errorWrapper">
 		<div id="loadErrorPage"><?php echo JText::_('TPL_NU_FE_LOADING'); ?></div>
-		<?php echo NU_BODY_BOTTOM; ?>
 	</body>
 </html>

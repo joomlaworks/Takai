@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
-	<name>GetK2</name>
-	<creationDate>July 10th, 2013</creationDate>
+	<name>Takai</name>
+	<creationDate>October, 2013</creationDate>
 	<author>Nuevvo</author>
 	<authorEmail>please-use-the-contact-form@nuevvo.com</authorEmail>
 	<authorUrl>http://nuevvo.com</authorUrl>
@@ -28,34 +28,34 @@
 		<folder>language</folder>
 	</files>
 	<positions>
-		<position>getK2-Main-Menu</position>
-		<position>getK2-Index-Middle-Bottom</position>
-		<position>getK2-Inner-Right</position>
-		<position>getK2-SideBar</position>
-		<position>getK2-Footer-Top</position>
-		<position>getK2-Footer-Left</position>
-		<position>getK2-Footer-Middle</position>
-		<position>getK2-Footer-Right</position>
-		<position>getK2-login</position>
-		<position>getK2-breadcrumbs</position>
-		<position>getK2-Tab1</position>
-		<position>getK2-Tab2</position>
-		<position>getK2-Tab3</position>
-		<position>getK2-SideBarLower</position>
-		<position>getK2-Leaderboard</position>
-		<position>getK2-component</position>
+		<position>takai-Main-Menu</position>
+		<position>takai-Index-Middle-Bottom</position>
+		<position>takai-Inner-Right</position>
+		<position>takai-SideBar</position>
+		<position>takai-Footer-Top</position>
+		<position>takai-Footer-Left</position>
+		<position>takai-Footer-Middle</position>
+		<position>takai-Footer-Right</position>
+		<position>takai-login</position>
+		<position>takai-breadcrumbs</position>
+		<position>takai-Tab1</position>
+		<position>takai-Tab2</position>
+		<position>takai-Tab3</position>
+		<position>takai-SideBarLower</position>
+		<position>takai-Leaderboard</position>
+		<position>takai-component</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_getk2.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_getk2.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_takai.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_takai.sys.ini</language>
 	</languages>
 
 	<config>
 		<fields name="params">
-			<fieldset name="basic" addfieldpath="templates/getk2/includes/elements/">
+			<fieldset name="basic" addfieldpath="templates/takai/includes/elements/">
 				<field name="nuBase" type="nuBase" />
 			</fieldset>
-			<fieldset name="nuParamsStandard" addfieldpath="templates/getk2/includes/elements/">
+			<fieldset name="nuParamsStandard" addfieldpath="templates/takai/includes/elements/">
 				<!-- ######################### Branding ######################### -->
 				<field name="nutpHeaderBranding" type="nuHeader" label="TPL_NU_BE_BRANDING" description="TPL_NU_BE_BRANDING_DESC" class="nuHeaderSiteLogo" />
 				<field name="siteLogo" type="nuImage" label="TPL_NU_BE_LOGO_IMAGE" description="TPL_NU_BE_LOGO_IMAGE_DESC" filter="raw" />
@@ -114,6 +114,21 @@
 					<option value="0">TPL_NU_BE_NO</option>
 					<option value="1">TPL_NU_BE_YES</option>
 				</field>
+				<!-- ######################### Credits & Copyrights ######################### -->
+				<field name="nutpHeaderCreditsCopyrights" type="nuHeader" label="TPL_NU_BE_CREDITS_COPYRIGHTS" description="TPL_NU_BE_CREDITS_COPYRIGHTS_DESC" class="nuHeaderCredits"/>
+				<field name="nutpCreditsName" type="text" default="designed by Nuevvo" size="40" label="TPL_NU_BE_CREDITS_NAME" description="TPL_NU_BE_CREDITS_NAME_DESC" />
+				<field name="nutpCreditsLink" type="text" default="http://nuevvo.com" size="40" label="TPL_NU_BE_CREDITS_LINK" description="TPL_NU_BE_CREDITS_LINK_DESC" />
+				<field name="nutpCopyright" type="text" default="" size="40" label="TPL_NU_BE_COPYRIGHT_NAME" description="TPL_NU_BE_COPYRIGHT_NAME_DESC" />
+				<field name="nutpCopyrightStartYear" type="text" default="" size="4" label="TPL_NU_BE_COPYRIGHT_START_YEAR" description="TPL_NU_BE_COPYRIGHT_START_YEAR_DESC" />
+				<!-- ######################### Google Analytics ######################### -->
+				<field name="nutpHeaderGoogleAnalytics" type="nuHeader" label="TPL_NU_BE_GOOGLE_ANALYTICS" description="TPL_NU_BE_GOOGLE_ANALYTICS_DESC" class="nuHeaderAnalytics"/>
+				<field name="nutpGAID" type="nuText" default="" size="40" prefix="UA-" label="TPL_NU_BE_GOOGLE_ANALYTICS_ID" description="TPL_NU_BE_GOOGLE_ANALYTICS_ID_DESC" />
+				<field name="nutpGADomain" type="text" default="" size="40" label="TPL_NU_BE_GOOGLE_ANALYTICS_DOMAIN" description="TPL_NU_BE_GOOGLE_ANALYTICS_DOMAIN_DESC" />
+				<!-- ######################### Webmaster Tools ######################### -->
+				<field name="nutpHeaderWebmasterTools" type="nuHeader" label="TPL_NU_BE_WEBMASTER_TOOLS" description="TPL_NU_BE_WEBMASTER_TOOLS_DESC" class="nuHeaderSEO" />
+				<field name="nutpGoogleVerificationID" type="text" default="" size="40" label="TPL_NU_BE_GOOGLE_VERIFICATION_ID" description="TPL_NU_BE_GOOGLE_VERIFICATION_ID_DESC" />
+				<field name="nutpBingVerificationID" type="text" default="" size="40" label="TPL_NU_BE_BING_VERIFICATION_ID" description="TPL_NU_BE_BING_VERIFICATION_ID_DESC" />
+				<field name="nutpAlexaVerificationID" type="text" default="" size="40" label="TPL_NU_BE_ALEXA_VERIFICATION_ID" description="TPL_NU_BE_ALEXA_VERIFICATION_ID_DESC" />
 				<!-- ######################### Social Links ######################### -->
 				<!-- <field name="nutpHeaderSocialLinks" type="nuHeader" label="TPL_NU_BE_SOCIAL_LINKS" description="TPL_NU_BE_SOCIAL_LINKS_DESC" class="nuHeaderSocialLinks" />
 				<field name="siteSocialFacebook" type="nuText" default="" size="40" prefix="https://www.facebook.com/" label="TPL_NU_BE_SL_FACEBOOK" description="" />
@@ -133,7 +148,7 @@
 				<field name="siteSocialBehance" type="nuText" default="" size="40" prefix="http://www.behance.net/" label="TPL_NU_BE_SL_BEHANCE" description="" />
 				<field name="siteSocialGithub" type="nuText" default="" size="40" prefix="https://github.com/" label="TPL_NU_BE_SL_GITHUB" description="" /> -->
 			</fieldset>
-			<fieldset name="nuParamsCodeBlocks" addfieldpath="templates/getk2/includes/elements/">
+			<fieldset name="nuParamsCodeBlocks" addfieldpath="templates/takai/includes/elements/">
 				<!-- ######################### Custom Code Blocks ######################### -->
 				<field name="nutpHeaderCustomCodeBlocks" type="nuHeader" label="TPL_NU_BE_CUSTOM_CODE_BLOCKS" description="TPL_NU_BE_CUSTOM_CODE_BLOCKS_DESC" class="nuHeaderCustomCode" />
 				<field name="nutpHeadTop" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_HEAD_TOP" description="TPL_NU_BE_HEAD_TOP_DESC" filter="raw" class="aceEditor" />
@@ -141,7 +156,7 @@
 				<field name="nutpBodyTop" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_BODY_TOP" description="TPL_NU_BE_BODY_TOP_DESC" filter="raw" class="aceEditor" />
 				<field name="nutpBodyBottom" type="nuTextArea" cols="20" rows="8" default="" label="TPL_NU_BE_BODY_BOTTOM" description="TPL_NU_BE_BODY_BOTTOM_DESC" filter="raw" class="aceEditor" />
 			</fieldset>
-			<fieldset name="nuParamsTemplateSpecific" addfieldpath="templates/getk2/includes/elements/">
+			<fieldset name="nuParamsTemplateSpecific" addfieldpath="templates/boilerplate/includes/elements/">
 				<!-- ######################### Content Highlights ######################### -->
 				<!-- <field name="nutpHeaderContentHighlights" type="nuHeader" label="TPL_NU_BE_CONTENT_HIGHLIGHTS" filter="raw" description="TPL_NU_BE_CONTENT_HIGHLIGHTS_DESC" class="nuHeaderHighlights" />
 				<field name="contentHighlights" type="nuHighlights" /> -->
@@ -175,9 +190,9 @@
 				<!-- <field name="nutpHeaderSectionColors" type="nuHeader" label="TPL_NU_BE_CATEGORY_COLORS" description="TPL_NU_BE_CATEGORY_COLORS_DESC" class="nuHeaderColors" />
 				<field name="categoryColors" type="nuCategoryColors" /> -->
 				<!-- ######################### Template Specific ######################### -->
-				<field name="sidebartabsleft"  type="text" default="LATEST COMMENTS" size="40" label="Sidebar Tabs (left)" description="Sidebar Tabs (left)" />
-				<field name="sidebartabsmiddle" type="text" default="TOP COMMENTERS" size="40" label="Sidebar Tabs (middle)" description="Sidebar Tabs (middle)" />
-				<field name="sidebartabsright" type="text" default="" size="40" label="Sidebar Tabs (right)" description="Sidebar Tabs (right)" />
+				<field name="sidebartabsleft"  type="text" default="LATEST COMMENTS" size="40" label="TPL_NU_BE_SIDEBAR_LEFT" description="TPL_NU_BE_SIDEBAR_LEFT_DESC" />
+				<field name="sidebartabsmiddle" type="text" default="TOP COMMENTERS" size="40" label="TPL_NU_BE_SIDEBAR_MIDDLE" description="TPL_NU_BE_SIDEBAR_MIDDLE_DESC" />
+				<field name="sidebartabsright" type="text" default="" size="40" label="TPL_NU_BE_SIDEBAR_RIGHT" description="TPL_NU_BE_SIDEBAR_RIGHT_DESC" />
 
 			</fieldset>
 		</fields>
