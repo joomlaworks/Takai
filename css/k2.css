@@ -39,7 +39,7 @@ div.k2FeedIcon a:hover span {display:none;}
 div.itemRatingForm .formLogLoading {background:url(../images/system/loading.gif) no-repeat left center;height:25px;padding:0 0 0 20px;}
 .itemRatingList,
 .itemRatingList a:hover,
-.itemRatingList .itemCurrentRating {background:url(../images/system/transparent_star.gif) left -1000px repeat-x;}
+.itemRatingList .itemCurrentRating {background:url(../images/system/transparent_star.png) left -1000px repeat-x; opacity: 0.5;}
 .itemRatingList {position:relative;float:left;width:125px;height:25px;overflow:hidden;list-style:none;margin:0;padding:0;background-position:left top;}
 .itemRatingList li {display:inline;background:none;padding:0;}
 .itemRatingList a,
@@ -1042,14 +1042,19 @@ div.k2CategoriesListBlock {font-size: 13px;}
 	table.calendar { margin:0 auto;background:#fff;border-collapse:collapse; width:280px;  }
 	table.calendar tr td { text-align:center; vertical-align:middle; padding:2px; border:2px solid #eee; background:#fff; }
 	table.calendar tr td.calendarNavMonthPrev { background:#515151;text-align:left;  border-right:2px solid transparent;  }
-	table.calendar tr td.calendarNavMonthPrev a {text-decoration:none; background: url(../images/icons/calendarPrev.png) no-repeat 6px 2px; width:100%; display: block; line-height: 20px;  overflow: hidden; color:#515151;  }
+	table.calendar tr td.calendarNavMonthPrev a {text-decoration:none; width:100%; display: block; line-height: 20px; overflow: hidden; color:#515151;  }
 	table.calendar tr td.calendarNavMonthPrev a:hover { text-decoration:none; color:#515151; }
 	table.calendar tr td.calendarCurrentMonth { background:#515151;  color: #d7d7d7; font-size:12px; font-family: 'Istok Web', 'Open Sans',Helvetica,Arial, sans-serif; font-weight: 700;
 	border-right:2px solid transparent; text-transform: uppercase; }
 	table.calendar tr td.calendarNavMonthNext { background:#515151;text-align:right;
 	border-left:2px solid #515151; }
-	table.calendar tr td.calendarNavMonthNext a { text-decoration:none; background: url(../images/icons/calendarNext.png) no-repeat 14px 2px; width:100%; display: block; line-height: 20px;  overflow: hidden; color:#515151; }
+	table.calendar tr td.calendarNavMonthNext a { text-decoration:none; width:100%; display: block; line-height: 20px;  overflow: hidden; color:#515151; }
 	table.calendar tr td.calendarNavMonthNext a:hover { text-decoration:none; color:#515151; }
+	table.calendar tr td.calendarNavMonthPrev a:before,
+	table.calendar tr td.calendarNavMonthNext a:before { color: #fff; font-family: 'fontello'; font-size: 20px; display: inline-block; vertical-align: middle; }
+	table.calendar tr td.calendarNavMonthPrev a:before { content: '\e87c'; padding-left: 5px; }
+	table.calendar tr td.calendarNavMonthNext a:before { content: '\e87d'; }
+
 	table.calendar tr td.calendarDayName { background:#d7d7d7; font-size:13px;width:14.2%; font-family: 'Istok Web', 'Open Sans',Helvetica,Arial, sans-serif;}
 	table.calendar tr td.calendarDateEmpty { background:#fbfbfb;}
 	table.calendar tr td.calendarDate {}
@@ -1070,7 +1075,7 @@ div.k2CategoriesListBlock {font-size: 13px;}
 
 	/*Tag Cloud*/
 	.k2TagCloudBlock { font-family: 'Istok Web', 'Open Sans', Helvetica, Arial, sans-serif; }
-	.k2TagCloudBlock a, .k2TagCloudBlock a:link,
+	.k2TagCloudBlock a,
 	.k2TagCloudBlock a:visited {padding:4px;float:left;display:block; color:#000; font-weight: 700; }
 	.k2TagCloudBlock a:hover {padding:4px; float:left; display:block; color:#fff; color: #2484b0; }
 
@@ -1094,20 +1099,30 @@ div.k2CategoriesListBlock {font-size: 13px;}
 	div.k2UsersBlock ul li div.ubUserDescription { line-height: 20px; }
 	div.k2UsersBlock ul li div.ubUserAdditionalInfo { padding: 15px 0 30px; border-bottom: 1px solid #d7d7d7; }
 		a.ubUserFeedIcon,
-		a.ubUserFeedIcon:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/fugue/feed.png) no-repeat 50% 50%;}
+		a.ubUserFeedIcon:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;}
+
 		a.ubUserFeedIcon span,
 		a.ubUserFeedIcon:hover span {display:none;}
 		a.ubUserURL,
-		a.ubUserURL:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/fugue/globe.png) no-repeat 50% 50%;}
+		a.ubUserURL:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;}
 		a.ubUserURL span,
 		a.ubUserURL:hover span {display:none;}
-		span.ubUserEmail {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/fugue/mail.png) no-repeat 50% 50%;overflow:hidden;}
+		span.ubUserEmail {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;overflow:hidden;}
 		span.ubUserEmail a {display:inline-block;margin:0;padding:0;width:16px;height:16px;text-indent:-9999px;}
+
+		a.ubUserFeedIcon:before,
+		a.ubUserURL:before,
+		span.ubUserEmail:before { display:inline-block; vertical-align: middle; font-family: 'fontello'; font-size: 16px; color: #515151; }
+
+		a.ubUserFeedIcon:before { content: '\e853'; }
+		a.ubUserURL:before {  content: '\e8b1'; }
+		span.ubUserEmail:before { content: '\e805'; }
 
 	div.k2UsersBlock ul li h3 {clear:both;margin:8px 0 0 0;padding:0;}
 	div.k2UsersBlock ul li ul.ubUserItems { font-weight: 700; font-size: 14px; line-height: 20px; margin: 10px 0; padding: 0; overflow: hidden;}
 	div.k2UsersBlock ul li ul.ubUserItems li { padding: 0 0 10px; }
 	div.k2UsersBlock ul li ul.ubUserItems li a,
-	div.k2UsersBlock ul li ul.ubUserItems li a:visited { background: url(../images/template/listArrowGray.png) no-repeat 0 4px; padding: 0 0 0 15px; display: block; }
+	div.k2UsersBlock ul li ul.ubUserItems li a:visited { padding: 0 0 0 15px; display: block; }
+	div.k2UsersBlock ul li ul.ubUserItems li a:before { font-family: 'fontello'; display: inline-block; vertical-align: middle; padding: 0 10px 0 0; content: '\e879'; color: #515151; }
 
 /* --- END --- */

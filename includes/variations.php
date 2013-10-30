@@ -95,6 +95,8 @@ if($this->params->get('colorVariations', 'default') && $this->params->get('color
 		$colorVariations = str_replace('_COLOR1_', $this->params->get('_COLOR1_'), $colorVariations);
 		$colorVariations = str_replace('_COLOR2_', $this->params->get('_COLOR2_'), $colorVariations);
 		$colorVariations = str_replace('_COLOR3_', $this->params->get('_COLOR3_'), $colorVariations);
+		$colorVariations = str_replace('_COLOR4_', $this->params->get('_COLOR4_'), $colorVariations);
+		$colorVariations = str_replace('_COLOR5_', $this->params->get('_COLOR5_'), $colorVariations);
 	}
 	if(strlen($colorVariations)>10){
 		$colorVariations = str_replace('_TEMPLATEPATH_', $templatePath, $colorVariations);
@@ -139,7 +141,7 @@ if($nuBodyClass) $nuBodyClass .= '';
 
 // Add other template specific rules and logic here
 /* -------------------- Layout Check (template specific) -------------------- */
-$viewCheck 		= ($this->countModules('getK2-Inner-Right'))?' large-8 indexLeft':' large-12 itemlistColumn';
+$viewCheck 		= ($this->countModules('takai-Inner-Right'))?' large-8 indexLeft':' large-12 itemlistColumn';
 $layoutCheck 	= ((!$isFrontpage))?'threeColLayout':'twoColLayout';
-$sideBarCheck	=	($this->countModules('getK2-SideBarLower or SideModulesLeft or SideModulesRight or SideBarLower'))?'large-8':'';
+$sideBarCheck	=	($this->countModules('takai-SideBarLower or SideModulesLeft or SideModulesRight or SideBarLower'))?'large-8':'';
 
