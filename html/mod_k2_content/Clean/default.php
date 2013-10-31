@@ -13,8 +13,8 @@ defined('_JEXEC') or die('Restricted access');
 
 <?php if($params->get('feed')): ?>
 	<div class="k2FeedIcon">
-		<a href="<?php echo JRoute::_('index.php?option=com_k2&view=itemlist&format=feed&moduleID='.$module->id);?>" title="<?php echo JText::_('Subscribe to this RSS feed'); ?>">
-			<span><?php echo JText::_('Subscribe to this RSS feed'); ?></span>
+		<a href="<?php echo JRoute::_('index.php?option=com_k2&view=itemlist&format=feed&moduleID='.$module->id);?>" title="<?php echo JText::_('Subscribe to this RSS feed'); ?>" class="icon-rss">
+			<span class="hidden"><?php echo JText::_('Subscribe to this RSS feed'); ?></span>
 		</a>
 		<div class="clr"></div>
 	</div>
@@ -106,8 +106,6 @@ defined('_JEXEC') or die('Restricted access');
 
       <?php endif; ?>
 
-
-
       <?php if($params->get('itemExtraFields') && count($item->extra_fields)): ?>
       <b><?php echo JText::_('Additional Info'); ?></b>
       <ul class="moduleItemExtraFields">
@@ -122,8 +120,6 @@ defined('_JEXEC') or die('Restricted access');
       <div class="clr"></div>
       <?php endif; ?>
 
-
-
       <?php if($params->get('itemVideo')): ?>
       <p class="moduleItemVideo">
       	<?php echo $item->video ;?>
@@ -135,7 +131,6 @@ defined('_JEXEC') or die('Restricted access');
       <div class="clr"></div>
       <?php endif; ?>
 
-
       <!-- Plugins: AfterDisplayContent -->
       <?php echo $item->event->AfterDisplayContent; ?>
 
@@ -143,14 +138,13 @@ defined('_JEXEC') or die('Restricted access');
       <?php echo $item->event->K2AfterDisplayContent; ?>
 
       <?php if($params->get('itemDateCreated')): ?>
-      <span class="moduleItemDateCreated"><?php echo JText::_('Written_on') ;?> <?php echo JHTML::_('date', $item->created, JText::_('DATE_FORMAT_TEMPLATE')); ?></span>
+      <span class="moduleItemDateCreated"><?php echo JText::_('Written_on') ;?> <?php echo JHTML::_('date', $item->created, JText::_('K2_DATE_FORMAT_LC2')); ?></span>
       <?php endif; ?>
 
       <?php if($params->get('itemCategory')): ?>
       <span class="moduleItemCategory">
       <?php echo JText::_('in') ;?> <a href="<?php echo $item->categoryLink; ?>"><?php echo $item->categoryname; ?></a></span>
       <?php endif; ?>
-
 
       <?php if($params->get('itemTags') && count($item->tags)>0): ?>
       <span class="moduleItemTags">
@@ -162,13 +156,13 @@ defined('_JEXEC') or die('Restricted access');
       <?php endif; ?>
 
       <?php if($params->get('itemAttachments') && count($item->attachments)): ?>
-	  <p class="moduleAttachements">
-	  <?php foreach ($item->attachments as $attachment): ?>
-		<a title="<?php echo $attachment->titleAttribute; ?>" href="<?php echo JRoute::_('index.php?option=com_k2&view=item&task=download&id='.$attachment->id); ?>">
-			<?php echo $attachment->title ; ?>
-		</a>
-	  <?php endforeach;?>
-	  </p>
+		  <p class="moduleAttachements">
+		  <?php foreach ($item->attachments as $attachment): ?>
+			<a title="<?php echo $attachment->titleAttribute; ?>" href="<?php echo JRoute::_('index.php?option=com_k2&view=item&task=download&id='.$attachment->id); ?>">
+				<?php echo $attachment->title ; ?>
+			</a>
+		  <?php endforeach;?>
+		  </p>
       <?php endif; ?>
 
 			<?php if($params->get('itemCommentsCounter') && $componentParams->get('comments')): ?>

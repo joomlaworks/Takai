@@ -5,18 +5,114 @@
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
  * @license		http://nuevvo.com/license
  */
-
 /*
 Note to developers:
 Any CSS value that starts and finishes with an underscore (_) is a value that is replaced dynamically when your site loads for the first time. We highly recommend NOT editing this CSS file to make "color variation" specific changes, as your changes may be lost when an update for this template is released. Instead, use the custom.css file to apply any such changes, with actual CSS values and not the _SOMETHING_ variables.
 */
-a,a:visited,.MenuArea .vertical-menu ul.menu > li a,.MenuArea .vertical-menu ul.menu > li a:visited,.MenuArea .horizontal-menu ul.menu > li a,.MenuArea .horizontal-menu ul.menu > li a:visited,.Footerwrap .FooterTop .module ul li a,.Footerwrap .FooterTop .module ul li a:visited,.Footerwrap .FooterTop .module ul ul.level1 li a:hover,.Footerwrap .k2ArchivesBlock ul li a,.k2CategoriesListBlock ul li a,.k2CategoriesListBlock ul li a:visited,.k2CategoriesListBlock ul ul.level1 li a:hover,ul.moduleTabs li:hover,.innerRight .IndexPopular h2 a:hover,.innerRight .IndexPopular .moduleItemCategory a,.innerRight .IndexPopular .moduleItemCategory a:visited,.errorPage .errorNumber,div.itemToolbar ul li.fontResizer,article.groupLeading a,article.groupLeading a:visited,article.groupLeading .catItemCategory,.itemListViewcatalogue .itemListSubCategories a,.itemListViewcatalogue .itemListSubCategories a:visited a:hover,.k2AccountPage .k2ProfileHeading,div.k2LatestCommentsBlock ul li span.lcUsername a,div.k2LatestCommentsBlock ul li span.lcUsername a:visited,div.k2LatestCommentsBlock ul li span.lcItemCategory a,div.k2LatestCommentsBlock ul li span.lcItemCategory a:visited,.k2ListsModule article h4 a:hover,div.k2AuthorsListBlock ul li a.abAuthorName,div.k2AuthorsListBlock ul li a.abAuthorName:visited,div.k2AuthorsListBlock ul li a.abAuthorLatestItem:hover,div.k2AuthorsListBlock ul li span.abAuthorCommentsCount,.k2TagCloudBlock a:hover,div.k2UsersBlock ul li a,div.k2UsersBlock ul li a:visited{color:_COLOR1_}.MenuArea .horizontal-menu ul.menu > li a:hover,.MenuArea .horizontal-menu ul.menu li > ul,.MenuArea .horizontal-menu ul.menu li > ul ul li a:hover,.pill,table.calendar tr td.calendarDateLinked a:hover,table.calendar tr td.calendarToday,table.calendar tr td.calendarTodayLinked,div.itemCommentsForm form input#submitCommentButton,#mailto-window button.button,.k2AccountPage button,div.k2LoginBlock,div.k2LoginBlock fieldset.input input.button,div.k2UserBlock,div.k2UserBlock form input.ubLogout,button,input[type="submit"],ul.TabsNavigation li a{background:_COLOR1_}div.k2UserBlock form input.ubLogout,div.k2LoginBlock fieldset.input input.button,.k2AccountPage button,#mailto-window button.button{color:#fff}
-.MenuArea .horizontal-menu ul.menu > li:hover > a, .MenuArea .horizontal-menu ul.menu > li > a:hover, .MenuArea .horizontal-menu ul.menu ul li a { color: #fff; background: _COLOR1_; }
+a,a:visited,.MenuArea .vertical-menu ul.menu > li a,.MenuArea .vertical-menu ul.menu > li a:visited,.MenuArea .horizontal-menu ul.menu > li a,.MenuArea .horizontal-menu ul.menu > li a:visited,.Footerwrap .FooterTop .module ul li a,.Footerwrap .FooterTop .module ul li a:visited,.Footerwrap .FooterTop .module ul ul.level1 li a:hover,.Footerwrap .k2ArchivesBlock ul li a,.k2CategoriesListBlock ul li a,.k2CategoriesListBlock ul li a:visited,.k2CategoriesListBlock ul ul.level1 li a:hover,ul.moduleTabs li:hover,.innerRight .IndexPopular h2 a:hover,.innerRight .IndexPopular .moduleItemCategory a,.innerRight .IndexPopular .moduleItemCategory a:visited,.errorPage .errorNumber,div.itemToolbar ul li.fontResizer,article.groupLeading a,article.groupLeading a:visited,article.groupLeading .catItemCategory,.itemListViewcatalogue .itemListSubCategories a,.itemListViewcatalogue .itemListSubCategories a:visited a:hover,.k2AccountPage .k2ProfileHeading,div.k2LatestCommentsBlock ul li span.lcUsername a,div.k2LatestCommentsBlock ul li span.lcUsername a:visited,div.k2LatestCommentsBlock ul li span.lcItemCategory a,div.k2LatestCommentsBlock ul li span.lcItemCategory a:visited,.k2ListsModule article h4 a:hover,div.k2AuthorsListBlock ul li a.abAuthorName,div.k2AuthorsListBlock ul li a.abAuthorName:visited,div.k2AuthorsListBlock ul li a.abAuthorLatestItem:hover,div.k2AuthorsListBlock ul li span.abAuthorCommentsCount,.k2TagCloudBlock a:hover,div.k2UsersBlock ul li a,div.k2UsersBlock ul li a:visited {
+	color:_COLOR1_;
+}
 
-div.k2LoginBlock h4,div.k2UserBlock h4{border-top:0}header{border-top:3px solid _COLOR1_}header .wrap{border-top:3px solid _COLOR1_}div.k2LoginBlock ul{border-bottom:1px solid _COLOR1_}#mainNavigation.MenuArea{border-top-color:_COLOR1}.itemlistColumn .catToolbar .catItemCommentsLink a{background:url(_TEMPLATEPATH_/images/icons/neutral/commentLink.png) no-repeat 0 0px}div.itemToolbar ul li a.itemPrintLink{background:url(_TEMPLATEPATH_/images/toolbar/neutral/print-link-icon.png) no-repeat 0 4px}div.itemToolbar ul li a.itemEmailLink{background:url(_TEMPLATEPATH_/images/toolbar/neutral/mail-link.png) no-repeat 0 6px}div.itemToolbar ul li a.itemVideoLink{background:url(_TEMPLATEPATH_/images/toolbar/neutral/movie-link-icon.png) no-repeat 0 3px}div.itemToolbar ul li a.itemImageGalleryLink{background:url(_TEMPLATEPATH_/images/toolbar/neutral/photo-link-icon.png) no-repeat 0 5px}div.itemToolbar ul li a.itemCommentsLink{background:url(_TEMPLATEPATH_/images/toolbar/neutral/commnet-link.png) no-repeat 0 100%}div.itemToolbar ul li a#fontIncrease img{width:17px;height:17px;background:url(_TEMPLATEPATH_/images/system/neutral/font_increase.png) no-repeat}
-		a.ubUserFeedIcon:before,
-		a.ubUserURL:before,
-		span.ubUserEmail:before { color:_COLOR5_ }
-		body{background:_COLOR2_;color:_COLOR5_}.Footerwrap,.itemListViewcatalogue .itemListCategory,div.latestItemsCategory,div.userBlock,div.itemAuthorBlock,div.latestItemsUser{background:_COLOR3_}div.userBlock{border-color:_COLOR2_}.Footerwrap,.cwrap,div.itemNavigation,section#content .indexLower,div.latestItemsCategory,div.latestItemView,div.itemComments,.tabbedModules,div.latestItemsUser{border-top-color:_COLOR4_}aside#sidebar .module,#itemListPrimary,#itemListSecondary,div.catItemExtraFields h4,div.genericItemExtraFields h4,.groupLeading,div#itemListLinks h4,article.userItemView,.itemLists h3,.itemExtraInformation h3,.genericItemList article,#mainNavigation.MenuArea .module h3{border-bottom-color:_COLOR4_}table.calendar tr td.calendarNavMonthPrev,table.calendar tr td.calendarCurrentMonth,table.calendar tr td.calendarNavMonthNext{border-left-color:transparent;background:_COLOR4_}table.calendar tr td.calendarNavMonthNext a,table.calendar tr td.calendarNavMonthPrev a{color:_COLOR4_}.inputbox, .k2SearchBlockForm input[type="text"]{border:1px solid _COLOR3_ !important}ul.moduleTabs li.current{background:_COLOR4_;border-bottom-color:_COLOR4_}.itemTab,ul.TabsNavigation li a.current{background:_COLOR4_}@media only screen and (max-width: 800px){#mainNavigation.MenuArea{background:_COLOR4_}.menuToggler,.menuCloseButton{background-color:_COLOR4_}}
-.MenuArea .horizontal-menu ul.menu li > ul ul { background: _COLOR1_; }
-.MenuArea .horizontal-menu ul.menu li > ul > li a:hover { background: _COLOR1_; background: rgba(0,0,0,.25); }
+.MenuArea .horizontal-menu ul.menu > li a:hover,.MenuArea .horizontal-menu ul.menu li > ul,.MenuArea .horizontal-menu ul.menu li > ul ul li a:hover,.pill,table.calendar tr td.calendarDateLinked a:hover,table.calendar tr td.calendarToday,table.calendar tr td.calendarTodayLinked,div.itemCommentsForm form input#submitCommentButton,#mailto-window button.button,.k2AccountPage button,div.k2LoginBlock,div.k2LoginBlock fieldset.input input.button,div.k2UserBlock,div.k2UserBlock form input.ubLogout,button,input[type="submit"],ul.TabsNavigation li a {
+	background:_COLOR1_;
+}
+
+div.k2UserBlock form input.ubLogout,div.k2LoginBlock fieldset.input input.button,.k2AccountPage button,#mailto-window button.button {
+	color:#fff;
+}
+
+.MenuArea .horizontal-menu ul.menu > li:hover > a,.MenuArea .horizontal-menu ul.menu > li > a:hover,.MenuArea .horizontal-menu ul.menu ul li a {
+	color:#fff;
+	background:_COLOR1_;
+}
+
+div.k2LoginBlock h4,div.k2UserBlock h4 {
+	border-top:0;
+}
+
+header {
+	border-top:3px solid _COLOR1_;
+}
+
+header .wrap {
+	border-top:3px solid _COLOR1_;
+}
+
+div.k2LoginBlock ul {
+	border-bottom:1px solid _COLOR1_;
+}
+
+#mainNavigation.MenuArea {
+	border-top-color:_COLOR1;
+}
+
+div.itemToolbar ul li a:before,
+.catItemCommentsLink a:before,
+a.ubUserFeedIcon:before,a.ubUserURL:before,span.ubUserEmail:before {
+	color:_COLOR5_;
+}
+
+body {
+	background:_COLOR2_;
+	color:_COLOR5_;
+}
+
+.Footerwrap,.itemListViewcatalogue .itemListCategory,div.latestItemsCategory,div.userBlock,div.itemAuthorBlock,div.latestItemsUser {
+	background:_COLOR3_;
+}
+
+div.userBlock {
+	border-color:_COLOR2_;
+}
+
+.Footerwrap,.cwrap,div.itemNavigation,section#content .indexLower,div.latestItemsCategory,div.latestItemView,div.itemComments,.tabbedModules,div.latestItemsUser {
+	border-top-color:_COLOR4_;
+}
+
+aside#sidebar .module,#itemListPrimary,#itemListSecondary,div.catItemExtraFields h4,div.genericItemExtraFields h4,.groupLeading,div#itemListLinks h4,article.userItemView,.itemLists h3,.itemExtraInformation h3,.genericItemList article,#mainNavigation.MenuArea .module h3 {
+	border-bottom-color:_COLOR4_;
+}
+
+table.calendar tr td.calendarNavMonthPrev,table.calendar tr td.calendarCurrentMonth,table.calendar tr td.calendarNavMonthNext {
+	border-left-color:transparent;
+	background:_COLOR4_;
+}
+
+table.calendar tr td.calendarNavMonthNext a,table.calendar tr td.calendarNavMonthPrev a {
+	color:_COLOR4_;
+}
+
+.inputbox,.k2SearchBlockForm input[type="text"] {
+	border:1px solid _COLOR3_!important;
+}
+
+ul.moduleTabs li.current {
+	background:_COLOR4_;
+	border-bottom-color:_COLOR4_;
+}
+
+.itemTab,ul.TabsNavigation li a.current {
+	background:_COLOR4_;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea { border: 1px solid _COLOR3_; }
+.catItemImage img { border: 0; }
+
+@media only screen and (max-width: 800px) {
+	#mainNavigation.MenuArea {
+		background:_COLOR4_;
+	}
+
+	.menuToggler,.menuCloseButton {
+		background-color:_COLOR4_;
+	}
+}
+
+.MenuArea .horizontal-menu ul.menu li > ul ul {
+	background:_COLOR1_;
+}
+
+.MenuArea .horizontal-menu ul.menu li > ul > li a:hover {
+	background:_COLOR1_;
+	background:rgba(0,0,0,.25);
+}

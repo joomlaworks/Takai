@@ -184,11 +184,11 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 			<?php echo $this->item->event->K2CommentsCounter; ?>
 		<?php else: ?>
 			<?php if($this->item->numOfComments > 0): ?>
-			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
+			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor" class="icon-comment">
 				<?php echo $this->item->numOfComments; ?> <?php echo ($this->item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
 			</a>
 			<?php else: ?>
-			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
+			<a href="<?php echo $this->item->link; ?>#itemCommentsAnchor" class="icon-comment">
 				<?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?>
 			</a>
 			<?php endif; ?>

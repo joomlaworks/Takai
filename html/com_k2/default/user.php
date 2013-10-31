@@ -29,8 +29,8 @@ $user = &JFactory::getUser();
 	<?php if($this->params->get('userFeedIcon',1)): ?>
 	<!-- RSS feed icon -->
 	<div class="k2FeedIcon">
-		<a href="<?php echo $this->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>">
-			<span><?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?></span>
+		<a href="<?php echo $this->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>" class="icon-rss">
+			<span class="hidden"><?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?></span>
 		</a>
 		<div class="clr"></div>
 	</div>
@@ -88,11 +88,11 @@ $user = &JFactory::getUser();
 
 	<?php if(count($this->items)): ?>
 	<!-- Item list -->
-	<div class="userItemList">
+	<div class="row userItemList">
 		<?php foreach ($this->items as $item): ?>
 
 		<!-- Start K2 Item Layout -->
-		<article class="userItemView<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) echo ' userItemViewUnpublished'; ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
+		<article class="column small-12 userItemView<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) echo ' userItemViewUnpublished'; ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
 
 			<!-- Plugins: BeforeDisplay -->
 			<?php echo $item->event->BeforeDisplay; ?>
@@ -245,11 +245,11 @@ $user = &JFactory::getUser();
 							<?php echo $item->event->K2CommentsCounter; ?>
 						<?php else: ?>
 							<?php if($item->numOfComments > 0): ?>
-							<a href="<?php echo $item->link; ?>#itemCommentsAnchor">
+							<a href="<?php echo $item->link; ?>#itemCommentsAnchor" class="icon-comment">
 								<?php echo $item->numOfComments; ?> <?php echo ($item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
 							</a>
 							<?php else: ?>
-							<a href="<?php echo $item->link; ?>#itemCommentsAnchor">
+							<a href="<?php echo $item->link; ?>#itemCommentsAnchor" class="icon-comment">
 								<?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?>
 							</a>
 							<?php endif; ?>

@@ -25,19 +25,19 @@ defined('_JEXEC') or die('Restricted access');
 	<?php if($this->params->get('tagFeedIcon',1)): ?>
 	<!-- RSS feed icon -->
 	<div class="k2FeedIcon">
-		<a href="<?php echo $this->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>">
-			<span><?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?></span>
+		<a href="<?php echo $this->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>" class="icon-rss">
+			<span class="hidden"><?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?></span>
 		</a>
 		<div class="clr"></div>
 	</div>
 	<?php endif; ?>
 
 	<?php if(count($this->items)): ?>
-	<section class="TagItemList">
+	<section class="row TagItemList">
 		<?php foreach($this->items as $item): ?>
 
 		<!-- Start K2 Item Layout -->
-		<article class="TagItemView">
+		<article class="column small-12 TagItemView">
 
 			<div class="TagItemHeader">
 				<?php if($item->params->get('tagItemDateCreated',1)): ?>

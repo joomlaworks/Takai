@@ -184,11 +184,11 @@
 					<option value="custom">TPL_NU_BE_CV_CUSTOM</option>
 				</field>
 				<!-- Note to developers: Add as many 'custom color' fields as the number of array elements on each color variation minus the identifier used as first item of the array. E.g. for 'color1|#101010|#202020', the identifier is 'color1' and the color options are 2 (the rest 2 items in the array). -->
-				<field name="_COLOR1_" type="text" label="TPL_NU_BE_CV_CC1_MAIN" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
-				<field name="_COLOR5_" type="text" label="TPL_NU_BE_CV_CC3_BODY_COLOR" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
-				<field name="_COLOR2_" type="text" label="TPL_NU_BE_CV_CC2_BG" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
-				<field name="_COLOR3_" type="text" label="TPL_NU_BE_CV_CC3_SECONDARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
-				<field name="_COLOR4_" type="text" label="TPL_NU_BE_CV_CC3_COMPLEMENTARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR1_" type="text" label="TPL_NU_BE_CV_CC_MAIN" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR5_" type="text" label="TPL_NU_BE_CV_CC_BODY_COLOR" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR2_" type="text" label="TPL_NU_BE_CV_CC_BG" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR3_" type="text" label="TPL_NU_BE_CV_CC_SECONDARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR4_" type="text" label="TPL_NU_BE_CV_CC_COMPLEMENTARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
 				<!-- ######################### Category Colors ######################### -->
 				<!-- <field name="nutpHeaderSectionColors" type="nuHeader" label="TPL_NU_BE_CATEGORY_COLORS" description="TPL_NU_BE_CATEGORY_COLORS_DESC" class="nuHeaderColors" />
 				<field name="categoryColors" type="nuCategoryColors" /> -->

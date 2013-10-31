@@ -107,13 +107,11 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- Font Resizer -->
 			<li class="fontResizer hide-on-small">
 				<span class="itemTextResizerTitle"><?php echo JText::_('K2_FONT_SIZE'); ?></span>
-				<a href="#" id="fontDecrease">
-					<span><?php echo JText::_('K2_DECREASE_FONT_SIZE'); ?></span>
-					<img src="<?php echo JURI::root(true); ?>/components/com_k2/images/system/blank.gif" alt="<?php echo JText::_('K2_DECREASE_FONT_SIZE'); ?>" />
+				<a href="#" id="fontDecrease" class="icon-minus-circled">
+					<span class="hidden"><?php echo JText::_('K2_DECREASE_FONT_SIZE'); ?></span>
 				</a>
-				<a href="#" id="fontIncrease">
-					<span><?php echo JText::_('K2_INCREASE_FONT_SIZE'); ?></span>
-					<img src="<?php echo JURI::root(true); ?>/components/com_k2/images/system/blank.gif" alt="<?php echo JText::_('K2_INCREASE_FONT_SIZE'); ?>" />
+				<a href="#" id="fontIncrease" class="icon-plus-circled">
+					<span class="hidden"><?php echo JText::_('K2_INCREASE_FONT_SIZE'); ?></span>
 				</a>
 			</li>
 			<?php endif; ?>
@@ -121,8 +119,8 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if($this->item->params->get('itemPrintButton') && !JRequest::getInt('print')): ?>
 			<!-- Print Button -->
 			<li class="hide-on-small">
-				<a class="itemPrintLink" rel="nofollow" href="<?php echo $this->item->printLink; ?>" onclick="window.open(this.href,'printWindow','width=900,height=600,location=no,menubar=no,resizable=yes,scrollbars=yes'); return false;">
-					<span><?php echo JText::_('K2_PRINT'); ?></span>
+				<a class="itemPrintLink icon-print" rel="nofollow" href="<?php echo $this->item->printLink; ?>" onclick="window.open(this.href,'printWindow','width=900,height=600,location=no,menubar=no,resizable=yes,scrollbars=yes'); return false;">
+					<span class="hidden"><?php echo JText::_('K2_PRINT'); ?></span>
 				</a>
 			</li>
 			<?php endif; ?>
@@ -130,8 +128,8 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if($this->item->params->get('itemEmailButton') && !JRequest::getInt('print')): ?>
 			<!-- Email Button -->
 			<li>
-				<a class="itemEmailLink" rel="nofollow" href="<?php echo $this->item->emailLink; ?>" onclick="window.open(this.href,'emailWindow','width=400,height=350,location=no,menubar=no,resizable=no,scrollbars=no'); return false;">
-					<span><?php echo JText::_('K2_EMAIL'); ?></span>
+				<a class="itemEmailLink icon-mail" rel="nofollow" href="<?php echo $this->item->emailLink; ?>" onclick="window.open(this.href,'emailWindow','width=400,height=350,location=no,menubar=no,resizable=no,scrollbars=no'); return false;">
+					<span class="hidden"><?php echo JText::_('K2_EMAIL'); ?></span>
 				</a>
 			</li>
 			<?php endif; ?>
@@ -146,14 +144,18 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if($this->item->params->get('itemVideoAnchor') && !empty($this->item->video)): ?>
 			<!-- Anchor link to item video below - if it exists -->
 			<li>
-				<a class="itemVideoLink k2Anchor" href="<?php echo $this->item->link; ?>#itemVideoAnchor"><?php echo JText::_('K2_MEDIA'); ?></a>
+				<a class="itemVideoLink k2Anchor icon-video" href="<?php echo $this->item->link; ?>#itemVideoAnchor">
+					<span class="hidden"><?php echo JText::_('K2_MEDIA'); ?></span>
+				</a>
 			</li>
 			<?php endif; ?>
 
 			<?php if($this->item->params->get('itemImageGalleryAnchor') && !empty($this->item->gallery)): ?>
 			<!-- Anchor link to item image gallery below - if it exists -->
 			<li>
-				<a class="itemImageGalleryLink k2Anchor" href="<?php echo $this->item->link; ?>#itemImageGalleryAnchor"><?php echo JText::_('K2_IMAGE_GALLERY'); ?></a>
+				<a class="itemImageGalleryLink k2Anchor icon-picture" href="<?php echo $this->item->link; ?>#itemImageGalleryAnchor">
+					<span class="hidden"><?php echo JText::_('K2_IMAGE_GALLERY'); ?></span>
+				</a>
 			</li>
 			<?php endif; ?>
 
@@ -165,12 +167,12 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo $this->item->event->K2CommentsCounter; ?>
 				<?php else: ?>
 					<?php if($this->item->numOfComments > 0): ?>
-					<a class="itemCommentsLink k2Anchor" href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
-						<span><?php echo $this->item->numOfComments; ?></span> <?php echo ($this->item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
+					<a class="itemCommentsLink k2Anchor icon-comment" href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
+						<span class="hidden"><?php echo $this->item->numOfComments; ?></span> <?php echo ($this->item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?></span>
 					</a>
 					<?php else: ?>
-					<a class="itemCommentsLink k2Anchor" href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
-						<?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?>
+					<a class="itemCommentsLink k2Anchor icon-comment" href="<?php echo $this->item->link; ?>#itemCommentsAnchor">
+						<span class="hidden"><?php echo JText::_('K2_BE_THE_FIRST_TO_COMMENT'); ?></span>
 					</a>
 					<?php endif; ?>
 				<?php endif; ?>

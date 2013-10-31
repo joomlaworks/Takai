@@ -14,8 +14,8 @@ defined('_JEXEC') or die('Restricted access');
 
 <?php if($params->get('feed')): ?>
 	<div class="k2FeedIcon">
-		<a href="<?php echo JRoute::_('index.php?option=com_k2&view=itemlist&format=feed&moduleID='.$module->id);?>" title="<?php echo JText::_('Subscribe to this RSS feed'); ?>">
-			<span><?php echo JText::_('Subscribe to this RSS feed'); ?></span>
+		<a href="<?php echo JRoute::_('index.php?option=com_k2&view=itemlist&format=feed&moduleID='.$module->id);?>" title="<?php echo JText::_('Subscribe to this RSS feed'); ?>" class="icon-rss">
+			<span class="hidden"><?php echo JText::_('Subscribe to this RSS feed'); ?></span>
 		</a>
 		<div class="clr"></div>
 	</div>
