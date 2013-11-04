@@ -159,35 +159,38 @@ require_once(dirname(__FILE__).'/includes/helper.php');
 
 		<footer class="row">
 			<?php if($this->countModules('takai-Footer-Left or takai-Footer-Middle or takai-Footer-Right or takai-Footer-Top')): ?>
-			<div class="column small-12 Footerwrap isFontIstok">
+			<div class="small-12 Footerwrap isFontIstok">
+
 				<?php if($this->countModules('takai-Footer-Top')): ?>
-				<div class="FooterTop">
+				<div class="column small-12 FooterTop">
 					<jdoc:include type="modules" name="takai-Footer-Top" style="takai" />
 				</div>
 				<div class="clr"></div>
 				<?php endif; ?>
 
 				<?php if($this->countModules('takai-Footer-Left or takai-Footer-Middle or takai-Footer-Right')): ?>
-				<div class="column small-12 FooterTopMiddle">
-					<?php if($this->countModules('takai-Footer-Left')): ?>
-					<div class="column small-12 large-5 FooterLeft equal">
-						<jdoc:include type="modules" name="takai-Footer-Left" style="takai" />
-					</div>
-					<?php endif; ?>
+				<div class="row">
+					<div class="column small-12 FooterTopMiddle">
+						<?php if($this->countModules('takai-Footer-Left')): ?>
+						<div class="column small-12 large-5 FooterLeft equal">
+							<jdoc:include type="modules" name="takai-Footer-Left" style="takai" />
+						</div>
+						<?php endif; ?>
 
-					<?php if($this->countModules('takai-Footer-Middle')): ?>
-					<div class="column small-6 large-5 FooterMiddle equal">
-						<jdoc:include type="modules" name="takai-Footer-Middle" style="takai" />
-					</div>
-					<?php endif; ?>
+						<?php if($this->countModules('takai-Footer-Middle')): ?>
+						<div class="column small-6 large-5 FooterMiddle equal">
+							<jdoc:include type="modules" name="takai-Footer-Middle" style="takai" />
+						</div>
+						<?php endif; ?>
 
-					<?php if($this->countModules('takai-Footer-Right')): ?>
-					<div class="column small-6 large-2 FooterRight equal">
-						<jdoc:include type="modules" name="takai-Footer-Right" style="takai" />
+						<?php if($this->countModules('takai-Footer-Right')): ?>
+						<div class="column small-6 large-2 FooterRight equal">
+							<jdoc:include type="modules" name="takai-Footer-Right" style="takai" />
+						</div>
+						<?php endif; ?>
 					</div>
 					<?php endif; ?>
 				</div>
-				<?php endif; ?>
 			</div>
 			<div class="clr"></div>
 			<?php endif; ?>

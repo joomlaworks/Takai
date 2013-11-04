@@ -375,33 +375,36 @@ header { border-top:3px solid #3399cc; position: relative; z-index: 2;}
 ----------------------------------------------------------------------*/
 
 footer {  }
-	.Footerwrap { background: #d7d7d7; border-top: 14px solid #515151; padding-top: 17px; margin: 0 auto 5px; overflow: hidden; position: relative;}
+	.Footerwrap { background: #d7d7d7; border-top: 14px solid #515151; padding-top: 15px; margin: 0 auto 5px; overflow: hidden; position: relative;}
 	.Footerwrap .dlSite,
 	.Footerwrap .dlSite:visited { display: none; right: 10px; top:0px; border-radius: 0 0 5px 5px; font-weight: 700; color: #ff9900; padding: 4px 7px; box-shadow: 0 2px 3px #888; background: #515151; position: absolute;}
 	.Footerwrap .dlSite:hover { color: #3399cc; top:-2px; }
 	.Footerwrap .dlSite:active { top: -4px; }
 	.Footerwrap .module {  }
 	.Footerwrap .module h3 { text-transform: uppercase; font-size: 16px; margin: 3px 0 0; color: #000; }
-	.Footerwrap .FooterTop { border-bottom: 1px solid #eee; padding: 16px 10px; overflow: hidden; }
-	.Footerwrap .FooterTop .module ul { list-style: none outside none;  }
-	.Footerwrap .FooterTop .module ul.level0 { padding: 0; margin: 10px 0; overflow: hidden; }
-	.Footerwrap .FooterTop .module ul.level0 > li { float: left; }
-	.Footerwrap .FooterTop .module ul li { font-weight: 700; font-size: 14px; line-height: 18px; padding-bottom: 0; }
-	.Footerwrap .FooterTop .module ul li a,
-	.Footerwrap .FooterTop .module ul li a:visited { color:#2484b0; }
-	.Footerwrap .FooterTop .module ul li a:hover { color:#515151; }
-	.Footerwrap .FooterTop .module ul li.activeCategory a { font-weight:700; }
-	.Footerwrap .FooterTop .module ul ul.level1 { border-top: 1px solid #eee; padding: 10px 0; margin: 5px 0; overflow: hidden; }
-	.Footerwrap .FooterTop .module ul ul.level1 li { font-weight: 400; }
-	.Footerwrap .FooterTop .module ul ul.level1 li a,
-	.Footerwrap .FooterTop .module ul ul.level1 li a:visited { color:#515151; }
-	.Footerwrap .FooterTop .module ul ul.level1 li a:hover { color: #2484b0; }
-	.Footerwrap .FooterTop .module ul ul.level1 li a:before { font-family: 'fontello'; display: inline-block; vertical-align: middle; padding: 0 10px 0 0; content: '\e879'; }
+	.Footerwrap { border-bottom: 1px solid #eee; overflow: hidden; }
+	.Footerwrap .module ul { list-style: none outside none; }
+	/* K2 Categories list module */
+	.Footerwrap .k2CategoriesListBlock ul.level0 { padding: 0; margin: 10px 0; overflow: hidden; }
+	.Footerwrap .k2CategoriesListBlock ul.level0 > li { float: left; }
+	.Footerwrap .k2CategoriesListBlock ul li { font-weight: 700; font-size: 14px; line-height: 18px; padding-bottom: 0; }
+	.Footerwrap .k2CategoriesListBlock ul li a,
+	.Footerwrap .k2CategoriesListBlock ul li a:visited { color:#2484b0; }
+	.Footerwrap .k2CategoriesListBlock ul li a:hover { color:#515151; }
+	.Footerwrap .k2CategoriesListBlock ul li.activeCategory a { font-weight:700; }
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 { border-top: 0; padding: 10px 0; margin: 5px 0; overflow: hidden; }
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 li { font-weight: 400; }
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 li a,
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 li a:visited { color:#515151; }
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 li a:hover { color: #2484b0; }
+	.Footerwrap .k2CategoriesListBlock ul ul.level1 li a:before { font-family: 'fontello'; display: inline-block; vertical-align: middle; padding: 0 10px 0 0; content: '\e879'; }
+	/* structure */
+	.Footerwrap .FooterTop { border-bottom: 1px solid #fff; padding: 0 15px; }
 	.Footerwrap .FooterLeft,
 	.Footerwrap .FooterMiddle,
 	.Footerwrap .FooterRight { padding: 26px 0; font-size: 14px; }
-	.Footerwrap .FooterLeft { border-right:1px solid #eee; padding: 26px 10px; }
-	.Footerwrap .FooterMiddle { border-right:1px solid #eee; padding: 26px 10px; }
+	.Footerwrap .FooterLeft { border-right:1px solid #eee; padding: 25px 15px; }
+	.Footerwrap .FooterMiddle { border-right:1px solid #eee; padding: 25px 15px; }
 
 	/*About Us*/
 	.Footerwrap .FooterLogo h2 { width:119px; height: 43px; float: left; margin: 10px 10px 10px 0; overflow: hidden; }
@@ -427,6 +430,7 @@ footer {  }
 /*----------------------------------------------------------------------
 	SideBar Modules: site wide modules
 ----------------------------------------------------------------------*/
+
 .sideModule { padding: 10px 15px !important; /* use this module suffix class for proper paddings */ }
 	.sideModule h3 { padding-left: 0!important; }
 
@@ -437,26 +441,26 @@ aside#sidebar { padding: 10px 0 20px 0; }
 	aside#sidebar .banner { padding: 10px 0 10px; /*use this class to disable all left padding e.g. on a standard 300 px wide banner*/ }
 	aside .module h3 { font-size: 16px; color:  #000;}
 	/*Categories Lists (vertical list , the horizontal is on the footer . if you want to include somewhere else just replace the aside element) */
-	.k2CategoriesListBlock  ul { list-style: none; font-family: 'Istok Web', 'Open Sans',Helvetica,Arial,sans-serif; }
-	.k2CategoriesListBlock  ul.level0 { padding: 0; margin: 10px 0; overflow: hidden; }
-	.k2CategoriesListBlock  ul.level0 li { }
-	.k2CategoriesListBlock  ul li { font-weight: 700; font-size: 14px; line-height: 18px; }
-	.k2CategoriesListBlock  ul li a,
-	.k2CategoriesListBlock  ul li a:visited { color:#2484b0; }
-	.k2CategoriesListBlock  ul li a:hover { color:#515151; }
+	.k2CategoriesListBlock ul { list-style: none; font-family: 'Istok Web', 'Open Sans',Helvetica,Arial,sans-serif; }
+	.k2CategoriesListBlock ul.level0 { padding: 0; margin: 10px 0; overflow: hidden; }
+	.k2CategoriesListBlock ul.level0 li { }
+	.k2CategoriesListBlock ul li { font-weight: 700; font-size: 14px; line-height: 18px; }
+	.k2CategoriesListBlock ul li a,
+	.k2CategoriesListBlock ul li a:visited { color:#2484b0; }
+	.k2CategoriesListBlock ul li a:hover { color:#515151; }
 	/*right floating only on top level*/
-	.k2CategoriesListBlock  ul.level0 .catCounter { float: right; }
-	.k2CategoriesListBlock  ul.level0 ul .catCounter { float: none; }
+	.k2CategoriesListBlock ul.level0 .catCounter { float: right; }
+	.k2CategoriesListBlock ul.level0 ul .catCounter { float: none; }
 	/*borders only on top level*/
-	.k2CategoriesListBlock  ul.level0 a { display: block; width:100%; border-bottom: 1px solid #d7d7d7; padding: 0 0 10px; }
-	.k2CategoriesListBlock  ul.level1 a { border: 0; width: auto; }
+	.k2CategoriesListBlock ul.level0 a { display: block; width:100%; border-bottom: 1px solid #d7d7d7; padding: 0 0 10px; }
+	.k2CategoriesListBlock ul.level1 a { border: 0; width: auto; }
 	/**/
-	.k2CategoriesListBlock  ul li.activeCategory a { font-weight:700; }
-	.k2CategoriesListBlock  ul ul.level1 { border-top: 1px solid #eee; padding: 0 0 10px 0; margin:10px 0; overflow: hidden; }
-	.k2CategoriesListBlock  ul ul.level1 li { font-weight: 400; }
-	.k2CategoriesListBlock  ul ul.level1 li a,
-	.k2CategoriesListBlock  ul ul.level1 li a:visited { color:#000; padding: 0 0 0 10px; }
-	.k2CategoriesListBlock  ul ul.level1 li a:hover { color: #2484b0; }
+	.k2CategoriesListBlock ul li.activeCategory a { font-weight:700; }
+	.k2CategoriesListBlock ul ul.level1 { padding: 0 0 10px 0; margin:10px 0; overflow: hidden; }
+	.k2CategoriesListBlock ul ul.level1 li { font-weight: 400; }
+	.k2CategoriesListBlock ul ul.level1 li a,
+	.k2CategoriesListBlock ul ul.level1 li a:visited { color:#000;  }
+	.k2CategoriesListBlock ul ul.level1 li a:hover { color: #2484b0; }
 	/*tabbed modules*/
 	ul.moduleTabs { list-style: none outside none; padding: 0; margin: 15px 0 0; padding: 0; position:relative;z-index:98;}
 	ul.moduleTabs li { padding:6px; cursor: pointer; font-weight: 700; font-family: 'Istok Web', 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px;	margin: 0 0 0 2px; display: inline-block; color:#515151; border:1px solid #d7d7d7; cursor: pointer;}
@@ -743,7 +747,7 @@ span.highlight{background-color:#FFFFCC;font-weight:bold;padding:1px 4px;}
 	header .wrap { border-top:3px solid #2484b0; }
 	.TagLine h2 { font-size: 23px; line-height: 28px; }
 
-	.Footerwrap .FooterTop .module ul.level0 > li { width: 50%; }
+	.Footerwrap .module ul.level0 > li { width: 50%; }
 
 	/* force all views to a single column */
 	div.itemContainer.odd { border: 0; }

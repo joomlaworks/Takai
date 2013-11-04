@@ -45,7 +45,7 @@ function modChrome_takai($module, &$params, &$attribs) {
 		<div class="module<?php if ($params->get('moduleclass_sfx')) echo ' '.$params->get('moduleclass_sfx'); ?>">
 
 			<?php if ($module->showtitle) : ?>
-			<h3><?php echo $module->title; ?></h3>
+			<h3 class="moduleTitle"><?php echo $module->title; ?></h3>
 			<?php endif; ?>
 
 			<div class="moduleContent">
