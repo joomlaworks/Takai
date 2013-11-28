@@ -189,6 +189,7 @@
 				<field name="_COLOR2_" type="text" label="TPL_NU_BE_CV_CC_BG" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
 				<field name="_COLOR3_" type="text" label="TPL_NU_BE_CV_CC_SECONDARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
 				<field name="_COLOR4_" type="text" label="TPL_NU_BE_CV_CC_COMPLEMENTARY" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
+				<field name="_COLOR6_" type="text" label="TPL_NU_BE_CV_CC_BORDER" description="TPL_NU_BE_CV_CC_DESC" class="nuColorPicker" />
 				<!-- ######################### Category Colors ######################### -->
 				<!-- <field name="nutpHeaderSectionColors" type="nuHeader" label="TPL_NU_BE_CATEGORY_COLORS" description="TPL_NU_BE_CATEGORY_COLORS_DESC" class="nuHeaderColors" />
 				<field name="categoryColors" type="nuCategoryColors" /> -->

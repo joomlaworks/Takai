@@ -97,6 +97,7 @@ if($this->params->get('colorVariations', 'default') && $this->params->get('color
 		$colorVariations = str_replace('_COLOR3_', $this->params->get('_COLOR3_'), $colorVariations);
 		$colorVariations = str_replace('_COLOR4_', $this->params->get('_COLOR4_'), $colorVariations);
 		$colorVariations = str_replace('_COLOR5_', $this->params->get('_COLOR5_'), $colorVariations);
+		$colorVariations = str_replace('_COLOR6_', $this->params->get('_COLOR6_'), $colorVariations);
 	}
 	if(strlen($colorVariations)>10){
 		$colorVariations = str_replace('_TEMPLATEPATH_', $templatePath, $colorVariations);
