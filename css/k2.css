@@ -383,6 +383,7 @@ ul.TabsNavigation { list-style: none outside none; margin: 15px 0 0; padding: 0;
 	.groupLeading h1 { font-size: 30px; line-height: 37px; margin: 15px 0; }
 	.groupLeading h1 sup { padding:2px 3px; font-family: 'Istok Web', 'Open Sans', Helvetica, Arial, sans-serif; border-radius:3px; color:#fff; font-weight: 400; background: #fe8c38;
 	font-size: 11px; text-transform: uppercase;}
+	.groupLeading h1 span {display:inline-block;}
 	.groupLeading .catItemIntroText { padding: 0 15px 10px 0; }
 	.groupLeading .catItemCategory a,
 	.groupLeading .catItemCategory a:visited { color:#000; text-decoration: underline; }
@@ -1010,7 +1011,7 @@ Component: Register & profile page views (register.php & profile.php)
 	.k2SearchBlock { position:relative; }
 	.k2SearchBlock form {  }
 	.k2SearchBlock form input[type="text"] { width: 228px; max-width: 70%; padding: 0 10px; height: 30px; line-height: 30px; font-size: 12px; color: #515151; border: 0; float: left; }
-	.k2SearchBlock form input.button { cursor: pointer; text-align: center; overflow: hidden; height: 30px; border: 0; border-radius: 0 5px 5px 0; font-size: 14px; max-width: 30%; }
+	.k2SearchBlock form input.button { cursor: pointer; text-align: center; overflow: hidden; height: 30px; border: 0; border-radius: 0 5px 5px 0; font-size: 14px; max-width: 30%; padding:5px 10px 3px;}
 	.k2SearchBlock form input.button:hover { background-position: 0 100%; }
 	.k2SearchBlock form input.k2SearchLoading { background:url(../images/system/searchLoader.gif) no-repeat 100% 50%;}
 	.k2SearchBlock .k2LiveSearchResults { display:none;background:#fff;position:absolute; z-index:99; border:1px solid #ccc;margin-top:-1px; }
