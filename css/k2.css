@@ -730,7 +730,7 @@ section.latestView { padding: 10px 0; }
 
 		.latestItemBody {padding:8px 0;margin:0;}
 
-		.latestItemImageBlock {padding:0;margin:0;float:left; max-height: 200px; overflow: hidden; border: 5px solid #fff; margin: 0 0 15px 0;  }
+		.latestItemImageBlock {padding:0; margin:0; max-height: 200px; overflow: hidden; border: 5px solid #fff; margin: 0 0 15px 0;  }
 			span.latestItemImage {display:block;text-align:center; line-height: 0;}
 			span.latestItemImage img { height: auto; }
 
