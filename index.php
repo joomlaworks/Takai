@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		1.0.1
  * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -116,10 +116,10 @@ require_once(dirname(__FILE__).'/includes/helper.php');
 					<?php endif; ?>
 				</section>
 
-				<?php if($this->countModules('takai-SideBarLower or takai-SideModulesLeft or takai-SideModulesRight or takai-SideBarLower')): ?>
+				<?php if($this->countModules('takai-SideBar or takai-SideModulesLeft or takai-SideModulesRight or takai-SideBarLower')): ?>
 				<aside id="sidebar" class="column small-12 large-4">
 
-					<?php if($this->countModules('takai-SideBarLower')): ?>
+					<?php if($this->countModules('takai-SideBar')): ?>
 					<jdoc:include type="modules" name="takai-SideBar" style="takai" />
 					<?php endif; ?>
 
