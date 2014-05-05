@@ -189,8 +189,8 @@ require_once(dirname(__FILE__).'/includes/helper.php');
 						</div>
 						<?php endif; ?>
 					</div>
-					<?php endif; ?>
 				</div>
+				<?php endif; ?>
 			</div>
 			<div class="clr"></div>
 			<?php endif; ?>
