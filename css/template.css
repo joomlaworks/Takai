@@ -1,5 +1,5 @@
 /**
- * @version		1.0.4
+ * @version		1.0.5
  * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -843,6 +843,9 @@ a img.calendar { width: 16px; height: 16px; margin-left: 3px; background: url(..
 .img-fulltext-float-left { float: left; margin-right: 10px; margin-bottom: 10px; }
 .img-intro-float-right { float: right; margin-left: 5px; margin-bottom: 5px; }
 .img-intro-float-left { float: left; margin-right: 5px; margin-bottom: 5px; }
+
+.jmodedit { border-radius: 5px; border: 1px solid #bbb; background: #ccc; min-height: 25px; width: 25px; text-align: center; line-height: 20px; }
+.icon-edit:before { content: '\e855'; display: inline-block; vertical-align: middle; font-size: 16px; }
 
 
 /*----------------------------------------------------------------------

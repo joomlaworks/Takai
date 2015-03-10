@@ -8,7 +8,7 @@
 	<authorUrl>http://nuevvo.com</authorUrl>
 	<copyright>Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.</copyright>
 	<license>http://nuevvo.com/license</license>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<description>TPL_NU_XML_DESCRIPTION</description>
 	<files>
 		<filename>component.php</filename>
