@@ -11,30 +11,29 @@
 defined('_JEXEC') or die('Restricted access');
 
 /* -------------------- API Calls & Assignments -------------------- */
-$app					= JFactory::getApplication();
-$document 		= JFactory::getDocument();
-$language			= JFactory::getLanguage();
+$app          = JFactory::getApplication();
+$document     = JFactory::getDocument();
+$language     = JFactory::getLanguage();
 
-$sitename			= $app->getCfg('sitename');
-$sitetemplate	= $app->getTemplate();
+$sitename     = $app->getCfg('sitename');
+$sitetemplate = $app->getTemplate();
 
-$siteurl			= JURI::base();
-$siterelpath	= $this->baseurl;
-$siteabspath	= JPATH_SITE;
+$siteurl      = JURI::base();
+$siterelpath  = $this->baseurl;
+$siteabspath  = JPATH_SITE;
 $templatePath = JURI::base(true).'/templates/'.$this->template;
 
 
 
 /* -------------------- Requests -------------------- */
-$option 			= JRequest::getCmd('option');
-$view 				= JRequest::getCmd('view');
-$layout 			= JRequest::getCmd('layout');
-$page 				= JRequest::getCmd('page');
-$task 				= JRequest::getCmd('task');
-$id 					= JRequest::getInt('id');
-$itemid 			= JRequest::getInt('Itemid');
-$tmpl 				= JRequest::getCmd('tmpl');
-
+$option = JRequest::getCmd('option');
+$view   = JRequest::getCmd('view');
+$layout = JRequest::getCmd('layout');
+$page   = JRequest::getCmd('page');
+$task   = JRequest::getCmd('task');
+$id     = JRequest::getInt('id');
+$itemid = JRequest::getInt('Itemid');
+$tmpl   = JRequest::getCmd('tmpl');
 
 
 /* -------------------- Helper Functions -------------------- */
