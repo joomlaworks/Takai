@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
 * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -14,9 +14,9 @@ defined('_JEXEC') or die('Restricted access');
 
 <h3><?php echo JText::_('K2_LEAVE_A_COMMENT') ?></h3>
 
-<?php if($this->params->get('commentsFormNotes')): ?>
+<?php if ($this->params->get('commentsFormNotes')): ?>
 <p class="itemCommentsFormNotes">
-	<?php if($this->params->get('commentsFormNotesText')): ?>
+	<?php if ($this->params->get('commentsFormNotesText')): ?>
 	<?php echo nl2br($this->params->get('commentsFormNotesText')); ?>
 	<?php else: ?>
 	<?php echo JText::_('K2_COMMENT_FORM_NOTES') ?>
@@ -29,7 +29,7 @@ defined('_JEXEC') or die('Restricted access');
 		<label class="formComment" for="commentText"><?php echo JText::_('K2_MESSAGE'); ?> *</label>
 		<textarea rows="20" cols="10" class="inputbox" onblur="if(this.value=='') this.value='<?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?>';" onfocus="if(this.value=='<?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?>') this.value='';" name="commentText" id="commentText"><?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?></textarea>
 
-		<?php if($this->params->get('recaptcha') && $this->user->guest): ?>
+		<?php if ($this->params->get('recaptcha') && $this->user->guest): ?>
 		<label class="formRecaptcha"><?php echo JText::_('K2_ENTER_THE_TWO_WORDS_YOU_SEE_BELOW'); ?></label>
 		<div id="recaptcha"></div>
 		<?php endif; ?>

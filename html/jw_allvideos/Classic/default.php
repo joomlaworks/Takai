@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
 * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -8,7 +8,7 @@
  */
 
 // no direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die('Restricted access');
 
 ?>
 

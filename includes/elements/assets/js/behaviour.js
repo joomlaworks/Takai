@@ -1,5 +1,5 @@
 /**
- * @version     1.0.1 (July 19th, 2013)
+ * @version     2.0 (July 19th, 2013)
  * @package     Akhtarma
  * @author      Nuevvo - http://nuevvo.com
  * @copyright   Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.

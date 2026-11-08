@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
 * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -14,24 +14,26 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <!-- Start K2 Latest Layout -->
-<section id="k2Container" class="latestView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
+<section id="k2Container" class="latestView<?php if ($this->params->get('pageclass_sfx')) {
+    echo ' '.$this->params->get('pageclass_sfx');
+} ?>">
 
-	<?php if($this->params->get('show_page_title')): ?>
+	<?php if ($this->params->get('show_page_title')): ?>
 	<!-- Page title -->
 	<div class="componentheading<?php echo $this->params->get('pageclass_sfx')?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
 	</div>
 	<?php endif; ?>
 
-	<?php foreach($this->blocks as $key=>$block): ?>
-	<div class="latestItemsContainer" style="width:<?php echo number_format(100/$this->params->get('latestItemsCols'), 1); ?>%;">
+	<?php foreach ($this->blocks as $key => $block): ?>
+	<div class="latestItemsContainer" style="width:<?php echo number_format(100 / $this->params->get('latestItemsCols'), 1); ?>%;">
 
-		<?php if($this->source=='categories'): $category=$block; ?>
+		<?php if ($this->source == 'categories'): $category = $block; ?>
 
-		<?php if($this->params->get('categoryFeed') || $this->params->get('categoryImage') || $this->params->get('categoryTitle') || $this->params->get('categoryDescription')): ?>
+		<?php if ($this->params->get('categoryFeed') || $this->params->get('categoryImage') || $this->params->get('categoryTitle') || $this->params->get('categoryDescription')): ?>
 		<!-- Start K2 Category block -->
 		<div class="latestItemsCategory Istok">
-			<?php if($this->params->get('categoryFeed')): ?>
+			<?php if ($this->params->get('categoryFeed')): ?>
 			<!-- RSS feed icon -->
 			<div class="k2FeedIcon">
 				<a href="<?php echo $category->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>" class="icon-rss">
@@ -64,13 +66,13 @@ defined('_JEXEC') or die('Restricted access');
 		<!-- End K2 Category block -->
 		<?php endif; ?>
 
-		<?php else: $user=$block; ?>
+		<?php else: $user = $block; ?>
 
 		<?php if ($this->params->get('userFeed') || $this->params->get('userImage') || $this->params->get('userName') || $this->params->get('userDescription') || $this->params->get('userURL') || $this->params->get('userEmail')): ?>
 		<!-- Start K2 User block -->
 		<div class="latestItemsUser">
 
-			<?php if($this->params->get('userFeed')): ?>
+			<?php if ($this->params->get('userFeed')): ?>
 			<!-- RSS feed icon -->
 			<div class="k2FeedIcon">
 				<a href="<?php echo $user->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>" class="icon-rss">
@@ -79,7 +81,7 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="clr"></div>
 			</div>
 			<?php endif; ?>
-			<?php //removed width => used CSS instead ?>
+			<?php //removed width => used CSS instead?>
 			<?php if ($this->params->get('userImage') && !empty($user->avatar)): ?>
 			<img src="<?php echo $user->avatar; ?>" alt="<?php echo $user->name; ?>" />
 			<?php endif; ?>
@@ -121,11 +123,12 @@ defined('_JEXEC') or die('Restricted access');
 
 		<!-- Start Items list -->
 		<div class="latestItemList">
-		<?php if($this->params->get('latestItemsDisplayEffect')=="first"): ?>
+		<?php if ($this->params->get('latestItemsDisplayEffect') == "first"): ?>
 
-			<?php foreach ($block->items as $itemCounter=>$item): K2HelperUtilities::setDefaultImage($item, 'latest', $this->params); ?>
-			<?php if($itemCounter==0): ?>
-			<?php $this->item=$item; echo $this->loadTemplate('item'); ?>
+			<?php foreach ($block->items as $itemCounter => $item): K2HelperUtilities::setDefaultImage($item, 'latest', $this->params); ?>
+			<?php if ($itemCounter == 0): ?>
+			<?php $this->item = $item;
+			    echo $this->loadTemplate('item'); ?>
 			<?php else: ?>
 		  <h2 class="latestItemTitleList">
 		  	<?php if ($item->params->get('latestItemTitleLinked')): ?>
@@ -142,7 +145,8 @@ defined('_JEXEC') or die('Restricted access');
 		<?php else: ?>
 
 			<?php foreach ($block->items as $item): K2HelperUtilities::setDefaultImage($item, 'latest', $this->params); ?>
-			<?php $this->item=$item; echo $this->loadTemplate('item'); ?>
+			<?php $this->item = $item;
+			    echo $this->loadTemplate('item'); ?>
 			<?php endforeach; ?>
 
 		<?php endif; ?>
@@ -151,7 +155,7 @@ defined('_JEXEC') or die('Restricted access');
 
 	</div>
 
-	<?php if(($key+1)%($this->params->get('latestItemsCols'))==0): ?>
+	<?php if (($key + 1) % ($this->params->get('latestItemsCols')) == 0): ?>
 	<div class="clr"></div>
 	<?php endif; ?>
 

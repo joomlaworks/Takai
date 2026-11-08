@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
 * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -11,22 +11,24 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Get user stuff (do not change)
-$user = &JFactory::getUser();
+$user = JFactory::getUser();
 
 ?>
 
 <!-- Start K2 User Layout -->
 
-<div id="k2Container" class="userView<?php if($this->params->get('pageclass_sfx')) echo ' '.$this->params->get('pageclass_sfx'); ?>">
+<div id="k2Container" class="userView<?php if ($this->params->get('pageclass_sfx')) {
+    echo ' '.$this->params->get('pageclass_sfx');
+} ?>">
 
-	<?php if($this->params->get('show_page_title') && $this->params->get('page_title')!=$this->user->name): ?>
+	<?php if ($this->params->get('show_page_title') && $this->params->get('page_title') != $this->user->name): ?>
 	<!-- Page title -->
 	<div class="componentheading<?php echo $this->params->get('pageclass_sfx')?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
 	</div>
 	<?php endif; ?>
 
-	<?php if($this->params->get('userFeedIcon',1)): ?>
+	<?php if ($this->params->get('userFeedIcon', 1)): ?>
 	<!-- RSS feed icon -->
 	<div class="k2FeedIcon">
 		<a href="<?php echo $this->feed; ?>" title="<?php echo JText::_('K2_SUBSCRIBE_TO_THIS_RSS_FEED'); ?>" class="icon-rss">
@@ -39,7 +41,7 @@ $user = &JFactory::getUser();
 	<?php if ($this->params->get('userImage') || $this->params->get('userName') || $this->params->get('userDescription') || $this->params->get('userURL') || $this->params->get('userEmail')): ?>
 	<div class="userBlock">
 
-		<?php if(isset($this->addLink) && JRequest::getInt('id')==$user->id): ?>
+		<?php if (isset($this->addLink) && JRequest::getInt('id') == $user->id): ?>
 		<!-- Item add link -->
 		<span class="userItemAddLink">
 			<a class="modal" rel="{handler:'iframe',size:{x:990,y:550}}" href="<?php echo $this->addLink; ?>">
@@ -86,13 +88,15 @@ $user = &JFactory::getUser();
 
 
 
-	<?php if(count($this->items)): ?>
+	<?php if (!empty($this->items)): ?>
 	<!-- Item list -->
 	<div class="row userItemList">
 		<?php foreach ($this->items as $item): ?>
 
 		<!-- Start K2 Item Layout -->
-		<article class="column small-12 userItemView<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) echo ' userItemViewUnpublished'; ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
+		<article class="column small-12 userItemView<?php if (!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)) {
+		    echo ' userItemViewUnpublished';
+		} ?><?php echo ($item->featured) ? ' userItemIsFeatured' : ''; ?>">
 
 			<!-- Plugins: BeforeDisplay -->
 			<?php echo $item->event->BeforeDisplay; ?>
@@ -101,17 +105,17 @@ $user = &JFactory::getUser();
 			<?php echo $item->event->K2BeforeDisplay; ?>
 
 			<div class="userItemHeader">
-				<?php if($item->params->get('userItemDateCreated')): ?>
+				<?php if ($item->params->get('userItemDateCreated')): ?>
 				<!-- Date created -->
 				<span class="userItemDateCreated Istok">
-					<?php echo JHTML::_('date', $item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
+					<?php echo JHTML::_('date', $item->created, JText::_('K2_DATE_FORMAT_LC2')); ?>
 				</span>
 				<?php endif; ?>
 
-			  <?php if($item->params->get('userItemTitle')): ?>
+			  <?php if ($item->params->get('userItemTitle')): ?>
 			  <!-- Item title -->
 			  <h3 class="userItemTitle">
-					<?php if(isset($item->editLink)): ?>
+					<?php if (isset($item->editLink)): ?>
 					<!-- Item edit link -->
 					<span class="userItemEditLink">
 						<a class="modal" rel="{handler:'iframe',size:{x:990,y:550}}" href="<?php echo $item->editLink; ?>">
@@ -127,7 +131,7 @@ $user = &JFactory::getUser();
 			  	<?php else: ?>
 			  	<?php echo $item->title; ?>
 			  	<?php endif; ?>
-			  	<?php if(!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)): ?>
+			  	<?php if (!$item->published || ($item->publish_up != $this->nullDate && $item->publish_up > $this->now) || ($item->publish_down != $this->nullDate && $item->publish_down < $this->now)): ?>
 			  	<span>
 		  			<sup>
 		  				<?php echo JText::_('K2_UNPUBLISHED'); ?>
@@ -137,7 +141,7 @@ $user = &JFactory::getUser();
 			  </h3>
 			  <?php endif; ?>
 
-			<?php if($item->params->get('userItemCategory')): ?>
+			<?php if ($item->params->get('userItemCategory')): ?>
 				<!-- Item category name -->
 				<div class="userItemCategory Istok">
 					<span><?php echo JText::_('K2_IN'); ?></span>
@@ -161,19 +165,27 @@ $user = &JFactory::getUser();
 			  <!-- K2 Plugins: K2BeforeDisplayContent -->
 			  <?php echo $item->event->K2BeforeDisplayContent; ?>
 
-			  <?php if($item->params->get('userItemImage') && !empty($item->imageGeneric)): ?>
+			  <?php if ($item->params->get('userItemImage') && !empty($item->imageGeneric)): ?>
 			  <!-- Item Image -->
 			  <div class="userItemImageBlock">
 				  <span class="userItemImage">
-				    <a href="<?php echo $item->link; ?>" title="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>">
-				    	<img src="<?php echo $item->imageGeneric; ?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" />
+				    <a href="<?php echo $item->link; ?>" title="<?php if (!empty($item->image_caption)) {
+				        echo K2HelperUtilities::cleanHtml($item->image_caption);
+				    } else {
+				        echo K2HelperUtilities::cleanHtml($item->title);
+				    } ?>">
+				    	<img src="<?php echo $item->imageGeneric; ?>" alt="<?php if (!empty($item->image_caption)) {
+				    	    echo K2HelperUtilities::cleanHtml($item->image_caption);
+				    	} else {
+				    	    echo K2HelperUtilities::cleanHtml($item->title);
+				    	} ?>" />
 				    </a>
 				  </span>
 				  <div class="clr"></div>
 			  </div>
 			  <?php endif; ?>
 
-				<?php if($item->params->get('userItemIntroText')): ?>
+				<?php if ($item->params->get('userItemIntroText')): ?>
 					<!-- Item introtext -->
 					<div class="userItemIntroText">
 						<?php echo $item->introtext; ?>
@@ -209,7 +221,7 @@ $user = &JFactory::getUser();
 
 			<div class="clr"></div>
 
-			<?php // The Toolbar ?>
+			<?php // The Toolbar?>
 
 				<div class="catToolbar Istok">
 				<!-- Item Hits -->
@@ -224,29 +236,29 @@ $user = &JFactory::getUser();
 						<span><?php echo JText::_('K2_RATE_THIS_ITEM'); ?></span>
 						<div class="itemRatingForm">
 							<ul class="itemRatingList">
-								<li class="itemCurrentRating" id="itemCurrentRating<?php echo $item->id; ?>" style="width:<?php echo $item->votingPercentage; ?>%;"></li>
+								<li class="itemCurrentRating" id="itemCurrentRating<?php echo $item->id; ?>" style="width:<?php echo isset($item->votingPercentage) ? $item->votingPercentage : ''; ?>%;"></li>
 								<li><a href="#" rel="<?php echo $item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
 								<li><a href="#" rel="<?php echo $item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
 								<li><a href="#" rel="<?php echo $item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
 								<li><a href="#" rel="<?php echo $item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
 								<li><a href="#" rel="<?php echo $item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
 							</ul>
-							<div id="itemRatingLog<?php echo $item->id; ?>" class="itemRatingLog"><?php echo $item->numOfvotes; ?></div>
+							<div id="itemRatingLog<?php echo $item->id; ?>" class="itemRatingLog"><?php echo isset($item->numOfvotes) ? $item->numOfvotes : ''; ?></div>
 							<div class="clr"></div>
 						</div>
 						<div class="clr"></div>
 					</div>
 
-				<?php if($item->params->get('userItemCommentsAnchor') && ( ($item->params->get('comments') == '2' && !$this->user->guest) || ($item->params->get('comments') == '1')) ): ?>
+				<?php if ($item->params->get('userItemCommentsAnchor') && (($item->params->get('comments') == '2' && !$this->user->guest) || ($item->params->get('comments') == '1'))): ?>
 					<!-- Anchor link to comments below -->
 					<div class="catItemCommentsLink">
-						<?php if(!empty($item->event->K2CommentsCounter)): ?>
+						<?php if (!empty($item->event->K2CommentsCounter)): ?>
 							<!-- K2 Plugins: K2CommentsCounter -->
 							<?php echo $item->event->K2CommentsCounter; ?>
 						<?php else: ?>
-							<?php if($item->numOfComments > 0): ?>
+							<?php if ($item->numOfComments > 0): ?>
 							<a href="<?php echo $item->link; ?>#itemCommentsAnchor" class="icon-comment">
-								<?php echo $item->numOfComments; ?> <?php echo ($item->numOfComments>1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
+								<?php echo $item->numOfComments; ?> <?php echo ($item->numOfComments > 1) ? JText::_('K2_COMMENTS') : JText::_('K2_COMMENT'); ?>
 							</a>
 							<?php else: ?>
 							<a href="<?php echo $item->link; ?>#itemCommentsAnchor" class="icon-comment">
@@ -257,7 +269,7 @@ $user = &JFactory::getUser();
 					</div>
 				<?php endif; ?>
 			</div>
-	 		<?php if($item->params->get('userItemTags') && count($item->tags)): ?>
+	 		<?php if ($item->params->get('userItemTags') && !empty($item->tags)): ?>
 				<!-- Item tags -->
 				<div class="userItemTagsBlock Istok">
 					<span><?php echo JText::_('K2_TAGGED_UNDER'); ?>:</span>
@@ -277,7 +289,7 @@ $user = &JFactory::getUser();
 	</div>
 
 	<!-- Pagination -->
-	<?php if(count($this->pagination->getPagesLinks())): ?>
+	<?php if (!empty($this->pagination->getPagesLinks())): ?>
 	<div class="k2Pagination">
 		<?php echo $this->pagination->getPagesLinks(); ?>
 	</div>

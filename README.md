@@ -1,0 +1,52 @@
+# Takai
+
+**Takai is the official demo site for K2, the popular award-winning content extension for Joomla, which JoomlaWorks designed back in 2012.**
+
+Released as a free template after requests from the K2 community, Takai is fully responsive and uses the JoomlaWorks template parameters. It is probably the best starting point for Joomla users that are just getting to know the content management super-powers of K2.
+
+It has off-canvas navigation, flexible grids, multiple K2 layouts, 8 preset colour variations and your own variation through colour pickers. It suits a blog, a magazine-style site or a product catalog built with K2.
+
+## Features
+
+- The official K2 demo template
+- Mobile and tablet friendly design
+- 8 built-in colour variations, plus your own
+- Off-canvas navigation and multiple K2 layouts
+
+## Links
+
+- [Product page](https://www.joomlaworks.net/joomla-templates/free-templates/takai)
+- [Live demo](https://templates.joomlaworks.net/#takai)
+- [Template documentation](https://www.joomlaworks.net/support/templates)
+- [Installation, content & customization guides](https://www.joomlaworks.net/support/templates/general-resources)
+
+## Requirements
+
+- Joomla 3.9 or newer, including [Joomla 3.x UTD](https://github.com/joomlaworks/joomla-3.x)
+- PHP 7.1 or newer (tested up to PHP 8.5)
+- K2 for the K2 layouts
+
+## License
+
+Free template. See the [Terms of Service](https://www.joomlaworks.net/about/tos).
+
+## Changelog
+
+### v2.0 - November 8th, 2026
+
+- **Requirements:** Joomla 3.9 or newer (including Joomla 3.x UTD) and PHP 7.1 up to PHP 8.5
+- **PHP 8 compatibility:** `count()` calls on values that may be empty (e.g. K2 tags, extra fields, attachments) replaced with `empty()` checks, so they no longer throw fatal errors on PHP 8; template parameters that are unset (e.g. on a fresh install) no longer pass `null` to string functions; the Google Fonts list is handled safely when its cache is missing or incomplete
+- Tested on PHP 8.5 and PHP 7.4 by rendering the main Joomla views (home, featured, article, print view, category blog & list, archive, search, login, error page) and K2 views (item, print view, category, tag, user, search, date archive) for every K2 sub-template set: no PHP errors, warnings, notices or deprecations
+- All PHP code formatted to the PSR-12 coding standard and checked for syntax errors on PHP 5.6, 7.4 and 8.1 to 8.5
+- **Internet Explorer support removed:** conditional comments and IE-only `<html>` classes, the `X-UA-Compatible` and `imagetoolbar` meta tags, the html5shiv loader, IE CSS hacks (`*prop`, `_prop`, `filter: progid:...`, `-ms-` properties, `zoom: 1`, `.lt-ie9`/`.isIE*` rules) and IE-only image filters in inline styles
+- **Vendor prefixes removed** where all browsers support the standard property (`-moz-`, `-o-`, `-ms-` and most `-webkit-` declarations, prefixed gradients and keyframes); legacy gradients converted to the standard syntax; `::-webkit-input-placeholder` & co. replaced by `::placeholder`
+- CSS syntax errors and invalid declarations fixed (see below); empty rule sets and the obsolete `speak` property removed; stylesheets formatted one rule per line
+- Images optimized losslessly (jpegoptim & optipng)
+- Template manifest: Joomla 3.9 minimum, new update server, version 2.0
+
+Fixes specific to Takai:
+
+- **PHP 8 fatal error fixed:** the error page (e.g. 404) itself crashed, because it loaded the full page helper instead of the error helper
+- K2 user pages no longer throw warnings for item ratings
+- Removed reference assignments of function results (`$user = &JFactory::getUser()`)
+- CSS: `box-shadow: 0` (invalid) is now `box-shadow: none`; old gradient syntax converted

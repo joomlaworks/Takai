@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
 * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 
 <!-- K2 user profile form -->
 <form action="<?php echo JURI::root(true); ?>/index.php" enctype="multipart/form-data" method="post" name="userform" autocomplete="off" class="form-validate">
-	<?php if($this->params->def('show_page_title',1)): ?>
+	<?php if ($this->params->def('show_page_title', 1)): ?>
 	<div class="componentheading<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 		<?php echo $this->escape($this->params->get('page_title')); ?>
 	</div>
@@ -39,7 +39,7 @@ defined('_JEXEC') or die;
 					<label id="namemsg" for="name"><?php echo JText::_('K2_NAME'); ?></label>
 				</td>
 				<td>
-					<input type="text" name="<?php echo $this->nameFieldName; ?>" id="name" size="40" value="<?php echo $this->escape($this->user->get( 'name' )); ?>" class="inputbox required" maxlength="50" />
+					<input type="text" name="<?php echo $this->nameFieldName; ?>" id="name" size="40" value="<?php echo $this->escape($this->user->get('name')); ?>" class="inputbox required" maxlength="50" />
 				</td>
 			</tr>
 			<tr>
@@ -47,16 +47,16 @@ defined('_JEXEC') or die;
 					<label id="emailmsg" for="email"><?php echo JText::_('K2_EMAIL'); ?></label>
 				</td>
 				<td>
-					<input type="text" id="email" name="<?php echo $this->emailFieldName; ?>" size="40" value="<?php echo $this->escape($this->user->get( 'email' )); ?>" class="inputbox required validate-email" maxlength="100" />
+					<input type="text" id="email" name="<?php echo $this->emailFieldName; ?>" size="40" value="<?php echo $this->escape($this->user->get('email')); ?>" class="inputbox required validate-email" maxlength="100" />
 				</td>
 			</tr>
-			<?php if(version_compare(JVERSION, '2.5', 'ge')): ?>
+			<?php if (version_compare(JVERSION, '2.5', 'ge')): ?>
 			<tr>
 				<td class="key">
 					<label id="email2msg" for="email2"><?php echo JText::_('K2_CONFIRM_EMAIL'); ?></label>
 				</td>
 				<td>
-					<input type="text" id="email2" name="jform[email2]" size="40" value="<?php echo $this->escape($this->user->get( 'email' )); ?>" class="inputbox required validate-email" maxlength="100" />
+					<input type="text" id="email2" name="jform[email2]" size="40" value="<?php echo $this->escape($this->user->get('email')); ?>" class="inputbox required validate-email" maxlength="100" />
 					*
 				</td>
 			</tr>
@@ -101,7 +101,7 @@ defined('_JEXEC') or die;
 			</tr>
 			<tr>
 				<td class="key">
-					<label id="imagemsg" for="image"><?php echo JText::_( 'K2_USER_IMAGE_AVATAR' ); ?></label>
+					<label id="imagemsg" for="image"><?php echo JText::_('K2_USER_IMAGE_AVATAR'); ?></label>
 				</td>
 				<td>
 					<input type="file" id="image" name="image"/>
@@ -120,15 +120,15 @@ defined('_JEXEC') or die;
 					<input type="text" size="50" value="<?php echo $this->K2User->url; ?>" name="url" id="url"/>
 				</td>
 			</tr>
-			<?php if(count(array_filter($this->K2Plugins))): ?>
+			<?php if (!empty(array_filter($this->K2Plugins))): ?>
 			<!-- K2 Plugin attached fields -->
 			<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ADDITIONAL_DETAILS'); ?>
 				</th>
 			</tr>
-			<?php foreach($this->K2Plugins as $K2Plugin): ?>
-			<?php if(!is_null($K2Plugin)): ?>
+			<?php foreach ($this->K2Plugins as $K2Plugin): ?>
+			<?php if (!is_null($K2Plugin)): ?>
 			<tr>
 				<td colspan="2">
 					<?php echo $K2Plugin->fields; ?>
@@ -137,7 +137,7 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 			<?php endforeach; ?>
 			<?php endif; ?>
-			<?php if(isset($this->params) && version_compare(JVERSION, '1.6', 'lt')): ?>
+			<?php if (isset($this->params) && version_compare(JVERSION, '1.6', 'lt')): ?>
 			<tr>
 				<th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_ADMINISTRATIVE_DETAILS'); ?>
@@ -150,11 +150,11 @@ defined('_JEXEC') or die;
 			</tr>
 			<?php endif; ?>
 			<!-- Joomla! 1.6+ JForm implementation -->
-			<?php if(isset($this->form)): ?>
+			<?php if (isset($this->form)): ?>
 			<?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
-				<?php if($fieldset->name != 'core'): ?>
+				<?php if ($fieldset->name != 'core'): ?>
 				<?php $fields = $this->form->getFieldset($fieldset->name);?>
-				<?php if (count($fields)):?>
+				<?php if (!empty($fields)):?>
 					<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
 					<tr>
 						<th colspan="2" class="k2ProfileHeading">
@@ -162,7 +162,7 @@ defined('_JEXEC') or die;
 						</th>
 					</tr>
 					<?php endif;?>
-					<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
+					<?php foreach ($fields as $field):// Iterate through the fields in the set and display them.?>
 						<?php if ($field->hidden):// If the field is hidden, just display the input.?>
 							<tr><td colspan="2"><?php echo $field->input;?></td></tr>
 						<?php else:?>
@@ -194,5 +194,5 @@ defined('_JEXEC') or die;
 	<input type="hidden" name="option" value="<?php echo $this->optionValue; ?>" />
 	<input type="hidden" name="task" value="<?php echo $this->taskValue; ?>" />
 	<input type="hidden" name="K2UserForm" value="1" />
-	<?php echo JHTML::_( 'form.token' ); ?>
+	<?php echo JHTML::_('form.token'); ?>
 </form>

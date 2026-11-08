@@ -43,7 +43,7 @@ if (isset($this->error)) : ?>
 					<div class="controls"><?php echo $this->form->getInput('contact_email_copy'); ?></div>
 				</div>
 			<?php } ?>
-			<?php //Dynamically load any additional fields from plugins. ?>
+			<?php //Dynamically load any additional fields from plugins.?>
 			<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
 				<?php if ($fieldset->name != 'contact'):?>
 					<?php $fields = $this->form->getFieldset($fieldset->name);?>

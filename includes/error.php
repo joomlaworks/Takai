@@ -1,6 +1,7 @@
 <?php
+
 /**
- * @version		1.0.0
+ * @version		2.0
  * @package		Boilerplate
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -38,16 +39,17 @@ $tmpl   = JRequest::getCmd('tmpl');
 
 /* -------------------- Helper Functions -------------------- */
 // Convert language strings to a JSON friendly format for the error/offline pages
-function nuText($str){
-	return str_replace("'","\\'",JText::_($str));
+function nuText($str)
+{
+    return str_replace("'", "\\'", JText::_($str));
 }
 
 
 
 /* -------------------- Sub-template Specific -------------------- */
-if(!isset($this->error)){
-	$this->error = JError::raiseWarning(403, JText::_('JERROR_ALERTNOAUTHOR'));
-	$this->debug = false;
+if (!isset($this->error)) {
+    $this->error = JError::raiseWarning(403, JText::_('JERROR_ALERTNOAUTHOR'));
+    $this->debug = false;
 }
 $uri = JFactory::getURI();
 $url = $uri->toString();
@@ -55,11 +57,11 @@ $url = $uri->toString();
 
 
 /* -------------------- Template Constants -------------------- */
-if(!defined('NU_CDN')) 					define('NU_CDN', 'http://cdn.nuevvo.net');
+if (!defined('NU_CDN')) {
+    define('NU_CDN', 'http://cdn.nuevvo.net');
+}
 
 
 
 /* -------------------- Custom Template Logic [CAN EDIT] -------------------- */
 // Add template specific rules and logic here
-
-

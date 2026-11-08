@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.0
+ * @version		2.0
  * @package		Takai
  * @author		Nuevvo - http://nuevvo.com
  * @copyright Copyright (c) 2010 - 2013 Nuevvo Webware Ltd. All rights reserved.
@@ -16,8 +16,10 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 ?>
 
 <!-- Start K2 Item Layout (links) -->
-<div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
-	  <?php if($this->item->params->get('catItemTitle')): ?>
+<div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php if ($this->item->params->get('pageclass_sfx')) {
+    echo ' '.$this->item->params->get('pageclass_sfx');
+} ?>">
+	  <?php if ($this->item->params->get('catItemTitle')): ?>
 	  <!-- Item title -->
 	  <h5 class="catItemTitle">
 	  	<?php if ($this->item->params->get('catItemTitleLinked')): ?>
@@ -29,12 +31,20 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  	<?php endif; ?>
 	  </h5>
 
-	  <?php if($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>
+	  <?php if ($this->item->params->get('catItemImage') && !empty($this->item->image)): ?>
 	  <!-- Item Image -->
 	  <div class="catItemImageBlock">
 		  <span class="catItemImage">
-		    <a href="<?php echo $this->item->link; ?>" title="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>">
-		    	<img src="<?php echo $this->item->image; ?>" alt="<?php if(!empty($this->item->image_caption)) echo K2HelperUtilities::cleanHtml($this->item->image_caption); else echo K2HelperUtilities::cleanHtml($this->item->title); ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
+		    <a href="<?php echo $this->item->link; ?>" title="<?php if (!empty($this->item->image_caption)) {
+		        echo K2HelperUtilities::cleanHtml($this->item->image_caption);
+		    } else {
+		        echo K2HelperUtilities::cleanHtml($this->item->title);
+		    } ?>">
+		    	<img src="<?php echo $this->item->image; ?>" alt="<?php if (!empty($this->item->image_caption)) {
+		    	    echo K2HelperUtilities::cleanHtml($this->item->image_caption);
+		    	} else {
+		    	    echo K2HelperUtilities::cleanHtml($this->item->title);
+		    	} ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
 		    </a>
 		  </span>
 		  <div class="clr"></div>

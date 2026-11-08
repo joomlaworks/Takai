@@ -69,9 +69,9 @@ jimport('joomla.html.html.bootstrap');
 	<?php endif; ?>
 
 <?php /*
-	<?php if ($this->params->get('presentation_style') == 'plain'):?>
-		<?php  echo '<h3>'. JText::_('COM_CONTACT_DETAILS').'</h3>';  ?>
-	<?php endif; ?>
+    <?php if ($this->params->get('presentation_style') == 'plain'):?>
+        <?php  echo '<h3>'. JText::_('COM_CONTACT_DETAILS').'</h3>';  ?>
+    <?php endif; ?>
 
 */ ?>
 	<?php if ($this->contact->image && $this->params->get('show_image')) : ?>
