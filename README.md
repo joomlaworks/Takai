@@ -44,6 +44,11 @@ Free template. See the [Terms of Service](https://www.joomlaworks.net/about/tos)
 - Images optimized losslessly (jpegoptim & optipng)
 - Added the standard `mobile-web-app-capable` meta tag next to Apple's (Chrome deprecates the Apple-only one)
 - Template manifest: Joomla 3.9 minimum, new update server, version 2.0
+- Tested on the real demo sites (60 pages each, Joomla 3.x UTD 3.18) on PHP 7.4 and 8.5, before and after the update
+- **PHP 8 fatal errors fixed:** Joomla tag pages (the `id[]` request array broke the `<body>` class), error pages rendered after a failed page ("Cannot redeclare function nuText()"), Joomla category list layouts (`$this->item->params` in a list view) and the K2 authors module (`count()` on an undefined list)
+- K2 search module: removed the `maxlength`/`size` attributes whose values K2 no longer provides
+- K2 layouts and modules no longer throw warnings for authors without a K2 profile, user pages without a description or undefined layout variables
+- `JFilterOutput::cleanText()` now gets a variable (it takes its argument by reference)
 
 Fixes specific to Takai:
 
