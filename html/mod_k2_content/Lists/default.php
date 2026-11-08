@@ -95,7 +95,7 @@ defined('_JEXEC') or die('Restricted access');
 	  <?php else:?>
 
 		  <?php if ($params->get('itemAuthor')): ?>
-	      <?php echo K2HelperUtilities::writtenBy($item->author->profile->gender); ?>
+	      <?php echo K2HelperUtilities::writtenBy(isset($item->author->profile->gender) ? $item->author->profile->gender : null); ?>
 
 				<?php if (isset($item->authorLink)): ?>
 				<a class="moduleItemAuthorLink" href="<?php echo $item->authorLink; ?>"><?php echo $item->author; ?></a>

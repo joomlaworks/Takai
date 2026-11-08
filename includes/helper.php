@@ -34,6 +34,9 @@ $layout = JRequest::getCmd('layout');
 $page   = JRequest::getCmd('page');
 $task   = JRequest::getCmd('task');
 $id     = JRequest::getInt('id');
+if (is_array($id)) {
+    $id = (int) reset($id);
+}
 $itemid = JRequest::getInt('Itemid');
 $tmpl   = JRequest::getCmd('tmpl');
 
@@ -41,26 +44,30 @@ $tmpl   = JRequest::getCmd('tmpl');
 
 /* -------------------- Helper Functions -------------------- */
 // Convert language strings to a JSON friendly format for the error/offline pages
-function nuText($str)
-{
-    return str_replace("'", "\\'", JText::_($str));
+if (!function_exists('nuText')) {
+    function nuText($str)
+    {
+        return str_replace("'", "\\'", JText::_($str));
+    }
 }
 
 // Hex to RGB conversion
-function hex2rgb($hex)
-{
-    $hex = str_replace("#", "", (string) $hex);
-    if (strlen($hex) == 3) {
-        $r = hexdec(substr($hex, 0, 1).substr($hex, 0, 1));
-        $g = hexdec(substr($hex, 1, 1).substr($hex, 1, 1));
-        $b = hexdec(substr($hex, 2, 1).substr($hex, 2, 1));
-    } else {
-        $r = hexdec(substr($hex, 0, 2));
-        $g = hexdec(substr($hex, 2, 2));
-        $b = hexdec(substr($hex, 4, 2));
+if (!function_exists('hex2rgb')) {
+    function hex2rgb($hex)
+    {
+        $hex = str_replace("#", "", (string) $hex);
+        if (strlen($hex) == 3) {
+            $r = hexdec(substr($hex, 0, 1).substr($hex, 0, 1));
+            $g = hexdec(substr($hex, 1, 1).substr($hex, 1, 1));
+            $b = hexdec(substr($hex, 2, 1).substr($hex, 2, 1));
+        } else {
+            $r = hexdec(substr($hex, 0, 2));
+            $g = hexdec(substr($hex, 2, 2));
+            $b = hexdec(substr($hex, 4, 2));
+        }
+        $rgb = array($r, $g, $b);
+        return implode(",", $rgb);
     }
-    $rgb = array($r, $g, $b);
-    return implode(",", $rgb);
 }
 
 

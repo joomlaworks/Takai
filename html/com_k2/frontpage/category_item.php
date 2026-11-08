@@ -73,7 +73,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<?php if ($this->item->params->get('catItemAuthor')): ?>
 		<!-- Item Author -->
 		<span class="catItemAuthor Istok">
-			<?php echo K2HelperUtilities::writtenBy($this->item->author->profile->gender); ?> <a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
+			<?php echo K2HelperUtilities::writtenBy(isset($this->item->author->profile->gender) ? $this->item->author->profile->gender : null); ?> <a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
 		</span>
 		<?php endif; ?>
 

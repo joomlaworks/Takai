@@ -22,7 +22,7 @@ If you wish to use the live search option, it's important that you maintain the 
 }?>">
 	<form action="<?php echo JRoute::_('index.php?option=com_k2&view=itemlist&task=search'); ?>" method="get" class="k2SearchBlockForm">
 
-		<input type="text" value="<?php echo $text; ?>" name="searchword" maxlength="<?php echo $maxlength; ?>" size="<?php echo $width; ?>" onfocus="if(this.value=='<?php echo $text; ?>') this.value='';" />
+		<input type="text" value="<?php echo $text; ?>" name="searchword" onfocus="if(this.value=='<?php echo $text; ?>') this.value='';" />
 
 		<?php if ($button): ?>
 		<?php if ($imagebutton): ?>
