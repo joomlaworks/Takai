@@ -30,6 +30,29 @@ It has off-canvas navigation, flexible grids, multiple K2 layouts, 8 preset colo
 
 Free template. See the [Terms of Service](https://www.joomlaworks.net/about/tos).
 
+## Third-party code
+
+Third-party code bundled with the template (versions as shipped; upstream status as of November 2026). Everything else is JoomlaWorks code.
+
+### Front-end
+
+| Library | Version | Location | License | Upstream |
+|---|---|---|---|---|
+| jQuery Tools (tabs) | 1.2.7 | `js/behaviour.js` | Public domain | Abandoned (2012) |
+| normalize.css | 2.1.1 / 2.1.2 | `css/template.css` / `css/component.css` | MIT | Latest 8.0.1 |
+| ZURB Foundation grid (CSS) | 4.x | `css/template.css`, `css/component.css` | MIT | Latest 6.9 |
+| Entypo icons via Fontello | — | `font/fontello` | SIL OFL 1.1 | Fontello set |
+
+### Template settings (backend)
+
+| Library | Version | Location | License | Upstream |
+|---|---|---|---|---|
+| jQuery MiniColors | ~2.0 | `includes/elements/assets/js/behaviour.js` | MIT | Latest 2.3.6 |
+| jQuery Swipebox | early 1.x | `includes/elements/assets/js/behaviour.js` | MIT | Latest 1.4.6, barely maintained |
+| jQuery Tools (tabs) | 1.2.7 | `includes/elements/assets/js/behaviour.js` | Public domain | Abandoned (2012) |
+| Google WebFont Loader | 1.x (Google CDN) | `includes/elements/nubase.php`, `includes/variations.php` | Apache-2.0 | Latest 1.6.28, unmaintained |
+| Ace editor | CDN build | `includes/elements/nutextarea.php` | BSD-3-Clause | Actively maintained |
+
 ## Changelog
 
 ### v2.0 - November 8th, 2026
