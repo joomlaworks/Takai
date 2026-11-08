@@ -360,8 +360,7 @@ if ($this->params->get('nutpLoadCustomCSS', 1)) {
 /* -------------------- Social Links/Icons -------------------- */
 $socialProviders = array(
     "siteSocialFacebook" => "https://www.facebook.com/",
-    "siteSocialTwitter" => "https://twitter.com/",
-    "siteSocialGooglePlus" => "https://plus.google.com/",
+    "siteSocialTwitter" => "https://x.com/",
     "siteSocialFoursquare" => "https://foursquare.com/",
     "siteSocialYouTube" => "http://www.youtube.com/",
     "siteSocialVimeo" => "http://vimeo.com/",
@@ -383,6 +382,9 @@ foreach ($socialProviders as $socialProviderParam => $socialProviderURL) {
         $socialObject->name = str_replace('siteSocial', '', $socialProviderParam);
         $socialObject->url = $socialProviderURL.$this->params->get($socialProviderParam);
         $socialObject->class = strtolower($socialObject->name);
+        if ($socialObject->class == 'twitter') {
+            $socialObject->name = 'X'; // formerly Twitter; the class stays 'twitter' for the icon CSS
+        }
         $social[] = $socialObject;
     }
 }

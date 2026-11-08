@@ -42,6 +42,7 @@ Third-party code bundled with the template (versions as shipped; upstream status
 | normalize.css | 2.1.1 / 2.1.2 | `css/template.css` / `css/component.css` | MIT | Latest 8.0.1 |
 | ZURB Foundation grid (CSS) | 4.x | `css/template.css`, `css/component.css` | MIT | Latest 6.9 |
 | Entypo icons via Fontello | — | `font/fontello` | SIL OFL 1.1 | Fontello set |
+| Bootstrap Icons (social network icons) | 1.13.2 | `css/template.css`, `includes/socialshare.php` | MIT | Current |
 
 ### Template settings (backend)
 
@@ -61,6 +62,10 @@ Modernisation:
 
 - **No MooTools needed any more:** K2 popups use K2's own modal (`data-k2-modal`), layouts no longer load MooTools or its tooltips, nuContent image popups use Joomla's modal behaviour without evaluated options (works with a strict Content Security Policy), and the template settings image field is plain JavaScript
 - Removed code for Joomla versions before 3 and the "jQuery version" template parameter
+- **Twitter is now X:** the social profile setting links to `x.com` and is labelled "X", and the Twitter share widget is replaced by a plain "Post on X" link (`includes/socialshare.php`), so no `platform.twitter.com` script loads; the "via" account is the K2 Twitter username or, for articles, the template's X profile
+- **Google+ removed** (the service closed in 2019): the Google +1 buttons and their `apis.google.com` script, the Google+ profile setting and the Google+ icon styles
+- **Social network icons from [Bootstrap Icons](https://icons.getbootstrap.com):** X, Facebook, YouTube, Vimeo, Instagram, Pinterest, Dribbble, Behance, GitHub and LinkedIn icons are SVGs drawn as CSS masks in the link's text colour (round and square variants included); class names are unchanged, so menu items that use them as link CSS classes keep working. Other networks keep the icon font
+- Removed unused K2 Twitter link styles that pointed to a missing image
 
 ### v2.0 - November 8th, 2026
 

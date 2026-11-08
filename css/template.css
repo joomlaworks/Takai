@@ -1357,7 +1357,6 @@ html[dir="rtl"] div.k2AuthorsListBlock ul li a.abAuthorAvatar img {float:right;m
 /* item styles */
 html[dir="rtl"] div.itemHits,
 html[dir="rtl"] div.itemRatingBlock {float:right;border-left:1px solid #d7d7d7;border-right:0;padding:0px 7px;margin:0 7px;}
-html[dir="rtl"] .itemGooglePlusOneButton,
 html[dir="rtl"] .itemFacebookButton,
 html[dir="rtl"] .itemTwitterButton,
 html[dir="rtl"] .itemSocialSharing {float:right;}
@@ -1627,28 +1626,11 @@ html[dir="rtl"] .Footerwrap .FooterLogo h2 {float:right;margin:10px 0 10px 10px;
 .icon-cc-pd:before {content:'\e8e7';} /* '' */
 .icon-cc-zero:before {content:'\e8e8';} /* '' */
 .icon-cc-share:before {content:'\e8e9';} /* '' */
-.icon-cc-remix:before {content:'\e8ea';} /* '' */
-.icon-github:before {content:'\e8eb';} /* '' */
-.icon-github-circled:before {content:'\e8ec';} /* '' */
+.icon-cc-remix:before {content:'\e8ea';} /* '' */
 .icon-flickr:before {content:'\e8ed';} /* '' */
-.icon-flickr-circled:before {content:'\e8ee';} /* '' */
-.icon-vimeo:before {content:'\e8ef';} /* '' */
-.icon-vimeo-circled:before {content:'\e8f0';} /* '' */
-.icon-twitter:before {content:'\e8f1';} /* '' */
-.icon-twitter-circled:before {content:'\e8f2';} /* '' */
-.icon-facebook:before {content:'\e8f3';} /* '' */
-.icon-facebook-circled:before {content:'\e8f4';} /* '' */
-.icon-facebook-squared:before {content:'\e8f5';} /* '' */
-.icon-gplus:before {content:'\e8f6';} /* '' */
-.icon-gplus-circled:before {content:'\e8f7';} /* '' */
-.icon-pinterest:before {content:'\e8f8';} /* '' */
-.icon-pinterest-circled:before {content:'\e8f9';} /* '' */
+.icon-flickr-circled:before {content:'\e8ee';} /* '' */
 .icon-tumblr:before {content:'\e8fa';} /* '' */
-.icon-tumblr-circled:before {content:'\e8fb';} /* '' */
-.icon-linkedin:before {content:'\e8fc';} /* '' */
-.icon-linkedin-circled:before {content:'\e8fd';} /* '' */
-.icon-dribbble:before {content:'\e8fe';} /* '' */
-.icon-dribbble-circled:before {content:'\e8ff';} /* '' */
+.icon-tumblr-circled:before {content:'\e8fb';} /* '' */
 .icon-stumbleupon:before {content:'\e900';} /* '' */
 .icon-stumbleupon-circled:before {content:'\e901';} /* '' */
 .icon-lastfm:before {content:'\e902';} /* '' */
@@ -1657,8 +1639,7 @@ html[dir="rtl"] .Footerwrap .FooterLogo h2 {float:right;margin:10px 0 10px 10px;
 .icon-rdio-circled:before {content:'\e905';} /* '' */
 .icon-spotify:before {content:'\e906';} /* '' */
 .icon-spotify-circled:before {content:'\e907';} /* '' */
-.icon-qq:before {content:'\e908';} /* '' */
-.icon-instagram:before {content:'\e909';} /* '' */
+.icon-qq:before {content:'\e908';} /* '' */
 .icon-dropbox:before {content:'\e90a';} /* '' */
 .icon-evernote:before {content:'\e90b';} /* '' */
 .icon-flattr:before {content:'\e90c';} /* '' */
@@ -1669,11 +1650,70 @@ html[dir="rtl"] .Footerwrap .FooterLogo h2 {float:right;margin:10px 0 10px 10px;
 .icon-paypal:before {content:'\e911';} /* '' */
 .icon-picasa:before {content:'\e912';} /* '' */
 .icon-soundcloud:before {content:'\e913';} /* '' */
-.icon-mixi:before {content:'\e914';} /* '' */
-.icon-behance:before {content:'\e915';} /* '' */
+.icon-mixi:before {content:'\e914';} /* '' */
 .icon-google-circles:before {content:'\e916';} /* '' */
 .icon-vkontakte:before {content:'\e917';} /* '' */
 .icon-smashing:before {content:'\e918';} /* '' */
 .icon-sweden:before {content:'\e919';} /* '' */
 .icon-db-shape:before {content:'\e91a';} /* '' */
 .icon-up-thin:before {content:'\e88e';} /* '' */
+
+/* Social network icons: Bootstrap Icons 1.13.2 (https://icons.getbootstrap.com, MIT License), drawn as CSS masks in the current text colour */
+:root {--nu-icon-github:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8'/%3E%3C/svg%3E");--nu-icon-github-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8'/%3E%3C/svg%3E");--nu-icon-vimeo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M15.992 4.204q-.106 2.334-3.262 6.393-3.263 4.243-5.522 4.243-1.4 0-2.367-2.583L3.55 7.523Q2.83 4.939 2.007 4.94q-.178.001-1.254.754L0 4.724a210 210 0 0 0 2.334-2.081q1.581-1.364 2.373-1.437 1.865-.185 2.298 2.553.466 2.952.646 3.666.54 2.447 1.186 2.445.5 0 1.508-1.587 1.006-1.587 1.077-2.415.144-1.37-1.077-1.37a3 3 0 0 0-1.185.261q1.183-3.86 4.508-3.756 2.466.075 2.324 3.2z'/%3E%3C/svg%3E");--nu-icon-vimeo-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cmask id='m'%3E%3Crect width='16' height='16' fill='%23fff'/%3E%3Cg transform='translate(4 4) scale(.5)'%3E%3Cpath d='M15.992 4.204q-.106 2.334-3.262 6.393-3.263 4.243-5.522 4.243-1.4 0-2.367-2.583L3.55 7.523Q2.83 4.939 2.007 4.94q-.178.001-1.254.754L0 4.724a210 210 0 0 0 2.334-2.081q1.581-1.364 2.373-1.437 1.865-.185 2.298 2.553.466 2.952.646 3.666.54 2.447 1.186 2.445.5 0 1.508-1.587 1.006-1.587 1.077-2.415.144-1.37-1.077-1.37a3 3 0 0 0-1.185.261q1.183-3.86 4.508-3.756 2.466.075 2.324 3.2z'/%3E%3C/g%3E%3C/mask%3E%3Ccircle cx='8' cy='8' r='8' mask='url(%23m)'/%3E%3C/svg%3E");--nu-icon-x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z'/%3E%3C/svg%3E");--nu-icon-x-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cmask id='m'%3E%3Crect width='16' height='16' fill='%23fff'/%3E%3Cg transform='translate(4 4) scale(.5)'%3E%3Cpath d='M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z'/%3E%3C/g%3E%3C/mask%3E%3Ccircle cx='8' cy='8' r='8' mask='url(%23m)'/%3E%3C/svg%3E");--nu-icon-facebook:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951'/%3E%3C/svg%3E");--nu-icon-facebook-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951'/%3E%3C/svg%3E");--nu-icon-facebook-squared:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951'/%3E%3C/svg%3E");--nu-icon-pinterest:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0'/%3E%3C/svg%3E");--nu-icon-pinterest-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0'/%3E%3C/svg%3E");--nu-icon-linkedin:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'/%3E%3C/svg%3E");--nu-icon-linkedin-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cmask id='m'%3E%3Crect width='16' height='16' fill='%23fff'/%3E%3Cg transform='translate(4 4) scale(.5)'%3E%3Cpath d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z'/%3E%3C/g%3E%3C/mask%3E%3Ccircle cx='8' cy='8' r='8' mask='url(%23m)'/%3E%3C/svg%3E");--nu-icon-dribbble:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z'/%3E%3C/svg%3E");--nu-icon-dribbble-circled:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z'/%3E%3C/svg%3E");--nu-icon-instagram:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334'/%3E%3C/svg%3E");--nu-icon-behance:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z'/%3E%3C/svg%3E");}
+:where(.icon-github):before,
+:where(.icon-github-circled):before,
+:where(.icon-vimeo):before,
+:where(.icon-vimeo-circled):before,
+:where(.icon-twitter):before,
+:where(.icon-twitter-circled):before,
+:where(.icon-facebook):before,
+:where(.icon-facebook-circled):before,
+:where(.icon-facebook-squared):before,
+:where(.icon-pinterest):before,
+:where(.icon-pinterest-circled):before,
+:where(.icon-linkedin):before,
+:where(.icon-linkedin-circled):before,
+:where(.icon-dribbble):before,
+:where(.icon-dribbble-circled):before,
+:where(.icon-instagram):before,
+:where(.icon-behance):before {display:inline-block;width:1em;height:1em;vertical-align:-.125em;}
+.icon-github:before,
+.icon-github-circled:before,
+.icon-vimeo:before,
+.icon-vimeo-circled:before,
+.icon-twitter:before,
+.icon-twitter-circled:before,
+.icon-facebook:before,
+.icon-facebook-circled:before,
+.icon-facebook-squared:before,
+.icon-pinterest:before,
+.icon-pinterest-circled:before,
+.icon-linkedin:before,
+.icon-linkedin-circled:before,
+.icon-dribbble:before,
+.icon-dribbble-circled:before,
+.icon-instagram:before,
+.icon-behance:before {content:"";background-color:currentColor;mask:center/contain no-repeat;}
+.icon-github:before {mask-image:var(--nu-icon-github);}
+.icon-github-circled:before {mask-image:var(--nu-icon-github-circled);}
+.icon-vimeo:before {mask-image:var(--nu-icon-vimeo);}
+.icon-vimeo-circled:before {mask-image:var(--nu-icon-vimeo-circled);}
+.icon-twitter:before {mask-image:var(--nu-icon-x);}
+.icon-twitter-circled:before {mask-image:var(--nu-icon-x-circled);}
+.icon-facebook:before {mask-image:var(--nu-icon-facebook);}
+.icon-facebook-circled:before {mask-image:var(--nu-icon-facebook-circled);}
+.icon-facebook-squared:before {mask-image:var(--nu-icon-facebook-squared);}
+.icon-pinterest:before {mask-image:var(--nu-icon-pinterest);}
+.icon-pinterest-circled:before {mask-image:var(--nu-icon-pinterest-circled);}
+.icon-linkedin:before {mask-image:var(--nu-icon-linkedin);}
+.icon-linkedin-circled:before {mask-image:var(--nu-icon-linkedin-circled);}
+.icon-dribbble:before {mask-image:var(--nu-icon-dribbble);}
+.icon-dribbble-circled:before {mask-image:var(--nu-icon-dribbble-circled);}
+.icon-instagram:before {mask-image:var(--nu-icon-instagram);}
+.icon-behance:before {mask-image:var(--nu-icon-behance);}
+/* "Post on X" share link */
+a.xShareButton {display:inline-flex;align-items:center;gap:.4em;height:20px;padding:0 .7em;border-radius:10px;background:#000;color:#fff;font:600 12px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;text-decoration:none;vertical-align:middle;white-space:nowrap;}
+a.xShareButton:hover,
+a.xShareButton:focus {background:#333;color:#fff;text-decoration:none;}
+a.xShareButton svg {width:12px;height:12px;flex:none;}
+a.xShareButton span {font:inherit;color:inherit;text-transform:none;letter-spacing:normal;}

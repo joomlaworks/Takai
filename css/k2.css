@@ -146,13 +146,9 @@ span.itemDateModified {display:block;margin:25px 0 5px 0;}
 .lowerItemToolbar .itemRatingLog {padding:6px 0 4px;}
 /*social sharing*/
 .itemSocialSharing {float:left;margin:0 0 10px;}
-.itemGooglePlusOneButton,
 .itemFacebookButton,
 .itemTwitterButton {float:left;padding-top:4px;}
 .itemHits {float:left;padding:0 7px 0 0;margin:0 7px 0 0;border-right:1px solid #d7d7d7;}
-span.itemHitsTwitterSep {padding:0 8px;color:#ccc;}
-span.itemTwitterLink a {background:url(../images/social/twitter_16.png) no-repeat 0 50%;padding:2px 0 0 20px;margin:8px 0;text-decoration:none;}
-span.itemTwitterLink a:hover {text-decoration:none;}
 .itemCategory a {font-weight:700;}
 .itemTagsBlock ul.itemTags {list-style:none;padding:0;margin:0;display:inline;}
 .itemTagsBlock ul.itemTags li {display:inline;list-style:none;padding:0 4px 0 0;margin:0;text-align:center;}

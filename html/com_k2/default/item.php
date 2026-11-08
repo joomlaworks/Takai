@@ -10,6 +10,8 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
+require_once dirname(__DIR__, 3).'/includes/socialshare.php';
+
 ?>
 
 <?php if (JRequest::getInt('print') == 1): ?>
@@ -344,7 +346,7 @@ defined('_JEXEC') or die('Restricted access');
   </div>
 
 	<?php // The item lower Toolbar?>
-	<?php if ($this->item->params->get('itemHits') || $this->item->params->get('itemRating') || $this->item->params->get('itemTwitterButton', 1) || $this->item->params->get('itemFacebookButton', 1) || $this->item->params->get('itemGooglePlusOneButton', 1)): ?>
+	<?php if ($this->item->params->get('itemHits') || $this->item->params->get('itemRating') || $this->item->params->get('itemTwitterButton', 1) || $this->item->params->get('itemFacebookButton', 1)): ?>
 		<div class="lowerItemToolbar isFontIstok">
 			<?php if ($this->item->params->get('itemHits')): ?>
 				<!-- Item Hits -->
@@ -373,14 +375,14 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			<?php endif; ?>
 
-			<?php if ($this->item->params->get('itemTwitterButton', 1) || $this->item->params->get('itemFacebookButton', 1) || $this->item->params->get('itemGooglePlusOneButton', 1)): ?>
+			<?php if ($this->item->params->get('itemTwitterButton', 1) || $this->item->params->get('itemFacebookButton', 1)): ?>
 			<!-- Social sharing -->
 			<div class="itemSocialSharing">
 
 				<?php if ($this->item->params->get('itemTwitterButton', 1)): ?>
-				<!-- Twitter Button -->
+				<!-- Post on X (formerly Twitter) -->
 				<div class="itemTwitterButton">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"<?php if ($this->item->params->get('twitterUsername')): ?> data-via="<?php echo $this->item->params->get('twitterUsername'); ?>"<?php endif; ?>><?php echo JText::_('K2_TWEET'); ?></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+					<?php echo NuSocialShare::xShareLink($this->item->params->get('twitterUsername')); ?>
 				</div>
 				<?php endif; ?>
 
@@ -398,21 +400,6 @@ defined('_JEXEC') or die('Restricted access');
 						}(document, 'script', 'facebook-jssdk'));
 					</script>
 					<div class="fb-like" data-send="false" data-width="200" data-show-faces="true"></div>
-				</div>
-				<?php endif; ?>
-
-				<?php if ($this->item->params->get('itemGooglePlusOneButton', 1)): ?>
-				<!-- Google +1 Button -->
-				<div class="itemGooglePlusOneButton">
-					<g:plusone annotation="inline" size="small" width="120"></g:plusone>
-					<script type="text/javascript">
-					  (function() {
-					  	window.___gcfg = {lang: 'en'}; // Define button default language here
-					    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-					    po.src = 'https://apis.google.com/js/plusone.js';
-					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-					  })();
-					</script>
 				</div>
 				<?php endif; ?>
 
