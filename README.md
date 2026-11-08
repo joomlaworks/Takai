@@ -55,6 +55,13 @@ Third-party code bundled with the template (versions as shipped; upstream status
 
 ## Changelog
 
+### Unreleased
+
+Modernisation:
+
+- **No MooTools needed any more:** K2 popups use K2's own modal (`data-k2-modal`), layouts no longer load MooTools or its tooltips, nuContent image popups use Joomla's modal behaviour without evaluated options (works with a strict Content Security Policy), and the template settings image field is plain JavaScript
+- Removed code for Joomla versions before 3 and the "jQuery version" template parameter
+
 ### v2.0 - November 8th, 2026
 
 - **Requirements:** Joomla 3.9 or newer (including Joomla 3.x UTD) and PHP 7.1 up to PHP 8.5
