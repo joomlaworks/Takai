@@ -83,9 +83,7 @@ if ($menu->getActive() == $menu->getDefault()) {
 
 
 /* -------------------- HTML5 Document for Joomla! 3.x -------------------- */
-if (version_compare(JVERSION, '3.0', 'ge') !== false) {
-    $document->setHtml5(true);
-}
+$document->setHtml5(true);
 
 
 
@@ -156,7 +154,7 @@ $document->addHeadLink($this->params->get('nutpIconIOS114x114', $templatePath.'/
 $document->addHeadLink($this->params->get('nutpIconIOS144x144', $templatePath.'/includes/images/ios/icon-72@2x.png'), 'apple-touch-icon', 'rel', array('sizes' => '144x144'));
 
 // Remove the canonical meta tag in Joomla! 3.x
-if (version_compare(JVERSION, '3.0', 'ge') !== false && $this->params->get('nutpRemoveCanonicalMeta', 0)) {
+if ($this->params->get('nutpRemoveCanonicalMeta', 0)) {
     foreach ($document->_links as $key => $link) {
         if ($link['relation'] == 'canonical') {
             unset($document->_links[$key]);
@@ -165,7 +163,7 @@ if (version_compare(JVERSION, '3.0', 'ge') !== false && $this->params->get('nutp
 }
 
 // Force load Bootstrap
-if (version_compare(JVERSION, '3.0', 'ge') !== false && $this->params->get('nutpForceLoadBootstrap', 0)) {
+if ($this->params->get('nutpForceLoadBootstrap', 0)) {
     JHtml::_('bootstrap.framework');
 }
 
@@ -246,19 +244,7 @@ $nuBodyBottom = ($this->params->get('nutpBodyBottom')) ? $this->params->get('nut
 /* -------------------- JS Handling -------------------- */
 if (!in_array($tmpl, array('error','raw'))) {
     // Load jQuery
-    $nutpJqueryHandling = $this->params->get('nutpJqueryHandling', '1.10.1');
-    if (version_compare(JVERSION, '3.0', 'ge') !== false) {
-        JHtml::_('jquery.framework');
-    } else {
-        if ($nutpJqueryHandling) {
-            if (version_compare(JVERSION, '1.6.0', 'ge')) {
-                JHtml::_('behavior.framework');
-            } else {
-                JHTML::_('behavior.mootools');
-            }
-            $document->addScript('//ajax.googleapis.com/ajax/libs/jquery/'.$nutpJqueryHandling.'/jquery.min.js');
-        }
-    }
+    JHtml::_('jquery.framework');
     // Template JS. Do not load in in front-end editing.
     if (!($option == 'com_k2' && $view == 'item' && ($task == 'add' || $task == 'edit'))) {
         $document->addScript(JURI::base(true).'/templates/'.$this->template.'/js/behaviour.js');

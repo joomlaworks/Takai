@@ -51,7 +51,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if (isset($this->addLink)): ?>
 			<!-- Item add link -->
 			<span class="catItemAddLink">
-				<a class="modal" rel="{handler:'iframe',size:{x:990,y:650}}" href="<?php echo $this->addLink; ?>">
+				<a data-k2-modal="iframe" href="<?php echo $this->addLink; ?>">
 					<?php echo JText::_('K2_ADD_A_NEW_ITEM_IN_THIS_CATEGORY'); ?>
 				</a>
 			</span>
